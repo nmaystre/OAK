@@ -120,6 +120,8 @@ $(document).ready(function () {
     var $closeBtn = $('.js-menu__close');
     var $backBtn = $('.js-menu__back');
 
+
+    $backBtn.hide();
     if ($window.width() < 768) {
 
       $menuLink.fadeOut();
