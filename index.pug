@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="en")
+    include templates/head.pug
+
+    body
+        include templates/components/header
+        main(id="fullpage")
+            div.fullpage-slide
+                include templates/components/main/screen1
+            div.fullpage-slide
+                include templates/components/main/screen2
+            div.fullpage-slide
+                include templates/components/main/screen3
+            div.fullpage-slide
+                include templates/components/main/screen4
+            div.fullpage-slide
+                include templates/components/main/screen5
+            div.fullpage-slide
+                include templates/components/main/screen6
+
+    script(src="js/vendor/jquery.min.js")
+    script(src="js/vendor/jquery.fullpage.min.js")
+    script(src="js/vendor/slick.min.js")
+    script(src="js/bundle.min.js")

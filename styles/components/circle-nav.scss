@@ -1,0 +1,155 @@
+.circle-nav {
+  margin: 80px 0 170px 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @media #{$breakpointDisplayLarge} {
+    margin: 30px 0;
+    padding: 0 30px;
+  }
+  @media #{$breakpointDisplay} {
+    margin: 30px 0;
+    padding: 0 30px;
+    justify-content: center;
+  }
+  @media #{$breakpointTablet} {
+    margin: 25px 0;
+  }
+  @media #{$breakpointMobile} {
+    margin: 25px 0;
+  }
+
+  &__item-wrp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media #{$breakpointDisplay} {
+      margin: 0 55px;
+    }
+    @media #{$breakpointTablet} {
+      padding: 40px;
+    }
+    @media #{$breakpointMobile} {
+      padding: 20px;
+    }
+  }
+
+  &__item {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    cursor: default;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/circle1.png");
+
+    &--civ {
+      background-image: url("../img/circle1.png");
+    }
+    &--mil {
+      background-image: url("../img/circle2.png");
+    }
+    &--tran {
+      background-image: url("../img/circle3.png");
+    }
+
+    @media #{$breakpointDisplay} {
+      width: 230px;
+      height: 230px;
+    }
+    @media #{$breakpointTablet} {
+      margin: auto;
+      margin-bottom: 40px;
+    }
+    @media #{$breakpointMobile} {
+      width: 180px;
+      height: 180px;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    cursor: pointer;
+    @media #{$breakpointDisplay} {
+      width: 230px;
+      height: 230px;
+    }
+    @media #{$breakpointMobile} {
+      width: 180px;
+      height: 180px;
+    }
+  }
+
+  &__link-wrp {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgba(255,255,255,0.2);
+    @media #{$breakpointDisplay} {
+      width: 230px;
+      height: 230px;
+    }
+    @media #{$breakpointMobile} {
+      width: 180px;
+      height: 180px;
+    }
+  }
+
+  &__decor {
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    opacity: 0;
+    background: transparent;
+    border: 2px solid $white;
+    transform: scale(0);
+    transition: all 0.4s ease-in-out 0.2s;
+    @media #{$breakpointDisplay} {
+      width: 230px;
+      height: 230px;
+    }
+    @media #{$breakpointMobile} {
+      width: 180px;
+      height: 180px;
+    }
+  }
+
+  &__item-wrp:hover .circle-nav__decor {
+    transform: scale(1.15);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &__caption {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    max-width: 200px;
+    margin-top: 30px;
+    @media #{$breakpointDisplayLarge} {
+      margin-top: 55px;
+    }
+    @media #{$breakpointTablet} {
+      display: inline-block;
+      max-width: 170px;
+    }
+    @media #{$breakpointMobile} {
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+  }
+}

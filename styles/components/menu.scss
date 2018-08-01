@@ -1,0 +1,334 @@
+.menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding-top: 106px;
+  padding-bottom: 106px;
+  visibility: hidden;
+  opacity: 0;
+  color: $gray-dark;
+  transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  background-color: $gray-lightest;
+  will-change: auto;
+  @media #{$breakpointTablet} {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  a {
+    color: $gray-dark;
+  }
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+    @media #{$breakpointTablet} {
+      z-index: 6;
+    }
+  }
+
+  .menu__inner {
+    max-width: 1733px;
+    padding-left: 34px;
+    margin: auto;
+    display: flex;
+
+    @media #{$breakpointDisplayLarge} {
+      width: 1220px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    @media #{$breakpointDisplay} {
+      width: 1220px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    @media #{$breakpointTablet} {
+      width: 768px;
+      padding-left: 19px;
+      padding-right: 19px;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    @media #{$breakpointMobile} {
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 16px;
+      min-width: 320px;
+    }
+  }
+
+  .menu__column {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+
+    @media #{$breakpointDisplayLarge} {
+      width: 430px;
+      padding-right: 25px;
+    }
+    @media #{$breakpointDisplay} {
+      width: 430px;
+      padding-right: 25px;
+    }
+    @media #{$breakpointTablet} {
+      width: 100%;
+      padding: 19px 0px;
+      border-bottom: 2px solid rgba($gray-lighten, 0.4);
+    }
+
+    &--nav:first-child {
+      @media #{$breakpointMobile} {
+        padding-bottom: 0;
+      }
+    }
+
+    &--nav:last-child {
+      @media #{$breakpointMobile} {
+        padding-top: 0;
+      }
+    }
+
+    &--links {
+      width: 550px;
+
+      @media #{$breakpointDisplayLarge} {
+        width: 420px;
+      }
+      @media #{$breakpointDisplay} {
+        width: 420px;
+      }
+      @media #{$breakpointTablet} {
+        width: 100%;
+      }
+      @media #{$breakpointMobile} {
+        order: 1;
+        border-top: 2px solid rgba($gray-lighten, 0.4);
+        border-bottom: none;
+      }
+    }
+
+    &--topbar {
+      @media #{$breakpointTablet} {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+    }
+
+    &:last-child {
+      margin-left: 60px;
+
+      @media #{$breakpointDisplayLarge} {
+        margin-left: 0px;
+      }
+      @media #{$breakpointDisplay} {
+        margin-left: 0px;
+      }
+      @media #{$breakpointTablet} {
+        margin-left: 0px;
+      }
+    }
+  }
+
+  .menu__contents {
+    @media #{$breakpointMobile} {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu__column {
+      @media #{$breakpointTablet} {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .menu__logo img {
+    @media #{$breakpointTablet} {
+      margin: 0 auto;
+    }
+    @media #{$breakpointMobile} {
+      width: 120px;
+      height: auto;
+    }
+  }
+
+  .menu__block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu__nav {
+    padding: 80px 0 0;
+    margin: 0;
+    list-style: none;
+    @media #{$breakpointTablet} {
+      padding: 0;
+    }
+  }
+
+  .menu__nav-item {
+    padding: 20px 0 0px;
+    &:first-child {
+      @media #{$breakpointTablet} {
+        padding-top: 0;
+      }
+    }
+  }
+
+  .menu__nav-link {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    min-height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 45px;
+    transition: all 0.2s linear;
+    font-weight: 700;
+    font-size: 18px;
+    color: $gray-lighten;
+
+    &:before {
+      content: "";
+      width: 34px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background-image: url("../img/star.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.7;
+      transition: all 0.2s linear;
+    }
+
+    &--book::before {
+      background-image: url("../img/icons/book.png");
+    }
+    &--download::before {
+      background-image: url("../img/icons/download.png");
+    }
+    &--feedback::before {
+      background-image: url("../img/icons/mail.png");
+    }
+    &--map::before {
+      background-image: url("../img/icons/share.png");
+    }
+    &--fav::before {
+      background-image: url("../img/icons/star.png");
+      background-position: top;
+    }
+
+    &:hover {
+      color: $gray-dark;
+      &::before {
+        opacity: 1;
+      }
+    }
+
+  }
+
+  .menu__subtitle {
+    color: $gray-dark;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0;
+  }
+
+  .menu__block {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 35px;
+      @media #{$breakpointMobile} {
+        margin-bottom: 0;
+      }
+    }
+
+    &--hascontent .menu__link--subtitle {
+
+      @media #{$breakpointMobile} {
+        position: relative;
+        padding-right: 30px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          width: 25px;
+          background-image: url("../img/icons/next-gray.png");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+    }
+  }
+
+  .menu__link {
+    color: $gray-dark;
+    font-size: 18px;
+    line-height: 30px;
+    transition: all 150ms linear;
+
+    @media #{$breakpointDisplayLarge} {
+      line-height: 22px;
+      margin: 7px 0;
+    }
+    @media #{$breakpointMobile} {
+      font-size: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    &--subtitle {
+      font-weight: 700;
+      @media #{$breakpointMobile} {
+        font-weight: 400;
+      }
+    }
+
+    &--subtitle.active {
+      background-color: #c0c0c0;
+    }
+
+    &:hover {
+      color: $gray-lighten;
+    }
+  }
+
+  .menu__close {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/icons/close.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .menu__search {
+    margin-right: 0;
+  }
+
+  .menu__back {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/icons/back-arrow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}

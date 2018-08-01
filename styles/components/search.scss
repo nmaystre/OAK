@@ -1,0 +1,82 @@
+.search {
+  height: 65px;
+  display: flex;
+  transform-origin: 100% 50%;
+  transition: all .5s;
+  align-items: center;
+  margin-top: 10px;
+
+  &--open {
+    padding: 0 25px;
+    background-color: #fff;
+
+    & .search__input {
+      display: flex;
+      width: 500px;
+      flex-grow: 1;
+      padding: 0 30px;
+      @media #{$breakpointMobile} {
+        width: 200px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+
+    & .search__btn {
+      background-image: url("../img/icons/search-blue.png");
+
+      @media #{$breakpointMobile} {
+        margin-right: 0;
+        margin-left: 2px;
+      }
+    }
+  }
+
+  &--menu {
+    height: auto;
+    margin-top: 0;
+
+    &.search--open {
+      padding: 0;
+      background: transparent;
+      width: 100%;
+      transform-origin: 0% 0%;
+      margin-left: auto;
+    }
+
+    & .search__btn {
+      background-image: url("../img/icons/search-gray.png");
+    }
+  }
+
+  &__input {
+    min-height: 30px;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transform-origin: 100% 50%;
+    transition: all .5s;
+    font-weight: 300;
+    outline: none;
+    background-color: transparent;
+  }
+
+  &__btn {
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/icons/search.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s linear;
+    outline: none;
+
+    &:hover, &:active {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+}
+

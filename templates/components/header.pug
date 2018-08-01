@@ -1,0 +1,89 @@
+header.header(id="header")
+    div.header__inner.container
+        div.header__row
+            a.header__logo.js-header__logo
+                img(src='img/logo.png' width='374' height='62')
+            nav.header__nav.nav.js-header__nav
+                ul.nav__list
+                    li.nav__item
+                        a.nav__link(href='#', target='_blank') О корпорации
+                    li.nav__item
+                        a.nav__link(href='#', target='_blank') Стратегии
+                    li.nav__item
+                        a.nav__link(href='#', target='_blank') Устойчивое развитие
+                    li.nav__item
+                        a.nav__link(href='#', target='_blank') Корпоративное управление
+                    li.nav__item
+                        a.nav__link(href='#', target='_blank') Приложения
+                    li.nav__item
+                        a.nav__link(href='#', target='_blank') Контакты
+            div.header__search
+                form.search.js-search
+                    input.search__input.js-search__input(type='search' placeholder='Что Вы хотите найти?')
+                    button.search__btn.js-search__btn
+                        span.visually-hidden Искать
+            div.header__sidebar-links
+                a.hamburger.hamburger--main(href='#')
+                    span.hamburger__icon
+                    span.visually-hidden Открыть меню
+                a.header__lang(href='#') En
+    div.header__menu.menu
+        div.menu__inner
+            div.show-for-tablet
+                div.menu__column.menu__column--topbar
+                    a.menu__close.js-menu__close(href='#')
+                    a.menu__back.js-menu__back(href='#')
+                    a.menu__logo.js-menu__logo(href='#')
+                        picture
+                            source(media="(min-width: 768px)" srcset="img/logo-color.png")
+                            source(media="(min-width: 320px)" srcset="img/logo-color-small.png")
+                            img(src='img/logo-color.png' width='372' height='61')
+                    div.menu__search
+                        form.search.search--menu.js-msearch
+                            input.search__input.js-msearch__input(type='search' placeholder='Что Вы хотите найти?')
+                            button.search__btn.js-msearch__btn
+                                span.visually-hidden Искать
+            div.menu__column.menu__column--links
+                a.menu__logo(href='#').hide-for-tablet
+                    img(src='img/logo-color.png' width='372' height='61')
+                ul.menu__nav
+                    li.menu__nav-item
+                        a.menu__nav-link.menu__nav-link--book(href='#') Оглавление
+                    li.menu__nav-item
+                        a.menu__nav-link.menu__nav-link--download(href='#') Скачать PDF-версию
+                    li.menu__nav-item
+                        a.menu__nav-link.menu__nav-link--feedback(href='#') Обратная связь
+                    li.menu__nav-item
+                        a.menu__nav-link.menu__nav-link--map(href='#') Карта сайта
+                    li.menu__nav-item
+                        a.menu__nav-link.menu__nav-link--fav(href='#') Избранное
+            div.menu__contents.row.js-menu
+                div.menu__column.menu__column--nav.grid__item.js-menu-column
+                    p.menu__block.js-mob-menu-block
+                        a.menu__link.menu__link--subtitle.js-mob-menu-subtitle(href='#') О Корпорации
+                        a.menu__link.js-mob-menu-link(href='#') Обращение Председателя Совета&nbsp;директоров ПАО&nbsp;«ОАК»
+                        a.menu__link.js-mob-menu-link(href='#') Обращение Президента, Председателя&nbsp;Правления ПАО&nbsp;«ОАК»
+                    p.menu__block.js-mob-menu-block
+                        a.menu__link.menu__link--subtitle.js-mob-menu-subtitle(href='#') Стратегия
+                        a.menu__link.js-mob-menu-link(href='#') Положение ОАК на рынке
+                        a.menu__link.js-mob-menu-link(href='#') Стратегия и бизнес-модель
+                        a.menu__link.js-mob-menu-link(href='#') Инвестиционная программа
+                        a.menu__link.js-mob-menu-link(href='#') Самолетостроительные проекты
+                        a.menu__link.js-mob-menu-link(href='#') Инновации и НИОКР
+                    p.menu__block.js-mob-menu-block
+                        a.menu__link.menu__link--subtitle.js-mob-menu-subtitle(href='#') Устойчивое развитие
+                        a.menu__link.js-mob-menu-link(href='#') Кадровая политика
+                        a.menu__link.js-mob-menu-link(href='#') Охрана окружающей среды
+                        a.menu__link.js-mob-menu-link(href='#') Социальные проекты и благотворительность
+                div.menu__column.menu__column--nav.grid__item.js-menu-column
+                    p.menu__block.js-mob-menu-block
+                        a.menu__link.menu__link--subtitle.js-mob-menu-subtitle(href='#') Корпоративное управление
+                        a.menu__link.js-mob-menu-link(href='#') Система корпоративного управления&nbsp;ОАК
+                        a.menu__link.js-mob-menu-link(href='#') Ценные бумаги
+                    p.menu__block.js-mob-menu-block
+                        a.menu__link.menu__link--subtitle.js-mob-menu-subtitle(href='#') Приложения
+                        a.menu__link.js-mob-menu-link(href='#') Приложение 1. Управление рисками
+                        a.menu__link.js-mob-menu-link(href='#') Приложение 2. Глоссарий и сокращения
+                        a.menu__link.js-mob-menu-link(href='#') Приложение 3. Заявление об ограничении ответственности
+                    p.menu__block.js-mob-menu-block
+                        a.menu__link.menu__link--subtitle.js-mob-menu-subtitle(href='#') Контактная информация

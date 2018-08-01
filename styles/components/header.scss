@@ -1,0 +1,125 @@
+.header {
+  position: fixed;
+  padding-top: 43px;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 101;
+  @media #{$breakpointTablet} {
+    padding-top: 16px;
+  }
+
+  &__menu {
+    width: 100%;
+    background-color: $white;
+  }
+
+  &__row {
+    background-color: transparent;
+    color: $white;
+    display: flex;
+    align-items: center;
+    min-height: 67px;
+
+    @media #{$breakpointDisplayLarge} {
+      flex-wrap: wrap;
+    }
+    @media #{$breakpointDisplay} {
+      flex-wrap: wrap;
+    }
+    @media #{$breakpointTablet} {
+      flex-wrap: nowrap;
+    }
+    @media #{$breakpointMobile} {
+      justify-content: space-between;
+    }
+  }
+
+  &__logo img{
+    @media #{$breakpointMobile} {
+      width: 220px;
+      height: auto;
+    }
+  }
+
+  &__search {
+    margin-left: auto;
+    @media #{$breakpointMobile} {
+      display: none;
+    }
+  }
+
+  &__sidebar-links {
+    position: absolute;
+    top: 52px;
+    right: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media #{$breakpointDisplayLarge} {
+      position: static;
+      top: 0;
+      right: 0;
+      flex-direction: row;
+      align-items: center;
+    }
+    @media #{$breakpointDisplay} {
+      position: static;
+      top: 0;
+      right: 0;
+      flex-direction: row;
+      align-items: center;
+    }
+    @media #{$breakpointTablet} {
+      position: static;
+      top: 0;
+      right: 0;
+      flex-direction: row;
+      align-items: center;
+    }
+
+  }
+
+  &__lang {
+    font-size: 24px;
+    padding-top: 9px;
+
+    @media #{$breakpointDisplayLarge} {
+      order: -1;
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+    @media #{$breakpointDisplay} {
+      order: -1;
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+    @media #{$breakpointTablet} {
+      order: -1;
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+    @media #{$breakpointMobile} {
+      display: none;
+    }
+
+  }
+
+  &__nav {
+    transition: all 0.2s linear;
+
+    @media #{$breakpointTablet} {
+      display: none;
+    }
+
+    &.hidden {
+      @media #{$breakpointDisplay} {
+        visibility: hidden;
+        opacity: 0;
+        font-size: 0;
+      }
+    }
+  }
+}

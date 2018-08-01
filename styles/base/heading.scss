@@ -1,0 +1,53 @@
+.heading {
+
+  margin: 0;
+
+  &--l {
+    font-size: 102px;
+    line-height: 102px;
+
+    @media #{$breakpointDisplayLarge} {
+      font-size: 100px;
+      line-height: 100px;
+    }
+    @media #{$breakpointDisplay} {
+      font-size: 88px;
+      line-height: 88px;
+    }
+    @media #{$breakpointTablet} {
+      font-size: 89px;
+      line-height: 89px;
+    }
+    @media #{$breakpointMobile} {
+      font-size: 42px;
+      line-height: 50px;
+      margin-bottom: 10px;
+    }
+  }
+  &--m {
+    font-size: 102px;
+    line-height: 102px;
+
+    @media #{$breakpointDisplayLarge} {
+      font-size: 95px;
+      line-height: 95px;
+      margin-bottom: 15px;
+    }
+    @media #{$breakpointDisplay} {
+      font-size: 88px;
+      line-height: 88px;
+      margin-bottom: 10px;
+    }
+    @media #{$breakpointTablet} {
+      font-size: 88px;
+      line-height: 88px;
+      margin-bottom: 10px;
+    }
+    @media #{$breakpointMobile} {
+      font-size: 42px;
+      line-height: 48px;
+      margin-bottom: 10px;
+    }
+  }
+}
+

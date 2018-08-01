@@ -1,0 +1,247 @@
+.intro {
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  min-height: 100vh;
+  padding-top: 250px;
+  @media #{$breakpointDisplay} {
+    padding-top: 170px;
+  }
+  @media #{$breakpointTablet} {
+    padding-top: 120px;
+  }
+  @media #{$breakpointTablet} {
+    padding-bottom: 10px;
+  }
+
+  &--main {
+    background-image: url(../img/plane1.png), url(../img/bg-clouds-1.jpg);
+    background-position: 70% 90%, 0 0;
+    background-size: 1155px, cover;
+    background-repeat: no-repeat, no-repeat;
+    position: relative;
+
+
+    @media #{$breakpointDisplayLarge} {
+      background-position: 55% 86%, 0 0;
+      background-size: 1140px, cover;
+      background-repeat: no-repeat, no-repeat;
+    }
+    @media #{$breakpointDisplay} {
+      padding-top: 250px;
+    }
+    @media #{$breakpointMobile} {
+      background-size: 500px, cover;
+      background-position: 100% 270px, 0 0;
+
+
+    }
+  }
+
+  &--models {
+    background-image: url(../img/bg-clouds-2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    & .intro__title br{
+      display: none;
+      @media #{$breakpointTablet} {
+        display: inline;
+      }
+    }
+
+    & .intro__subtitle br{
+      @media #{$breakpointTablet} {
+        display: none;
+      }
+    }
+
+    & .intro__title {
+      @media #{$breakpointMobile} {
+        font-size: 35px;
+        line-height: 35px;
+      }
+    }
+  }
+
+  &--civil {
+    background-image: url(../img/bg-clouds-3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+    position: relative;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../img/cloud1.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    &::after {
+      width: 1200px;
+      height: 1000px;
+      left: 70%;
+      bottom: 30%;
+      @media #{$breakpointTablet} {
+        width: 600px;
+        height: 400px;
+      }
+    }
+    &::before {
+      width: 1000px;
+      height: 800px;
+      left: 10%;
+      bottom: -20%;
+
+      @media #{$breakpointTablet} {
+        width: 500px;
+        height: 300px;
+        left: 10%;
+        bottom: 0%;
+      }
+    }
+  }
+
+  &--military {
+    background-image: url(../img/bg-clouds-4.jpg);
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+    position: relative;
+    @media #{$breakpointTablet} {
+      background-position: center;
+    }
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../img/cloud1.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    &::after {
+      width: 1200px;
+      height: 700px;
+      left: 80%;
+      bottom: -200px;
+    }
+    &::before {
+      width: 1200px;
+      height: 1000px;
+      left: 0%;
+      bottom: 0%;
+      @media #{$breakpointDisplayLarge} {
+        left: -40%;
+        bottom: -20%;
+      }
+      @media #{$breakpointTablet} {
+        width: 500px;
+        height: 300px;
+        left: 40%;
+        bottom: 0%;
+      }
+    }
+  }
+
+  &--transport {
+    background-image: url(../img/bg-clouds-5.jpg);
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+    position: relative;
+    &::before, &::after {
+      content: '';
+      width: 1200px;
+      height: 700px;
+      position: absolute;
+      background-image: url(../img/cloud1.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    &::after {
+      left: 50%;
+      bottom: -200px;
+      @media #{$breakpointDisplayLarge} {
+        left: 40%;
+      }
+    }
+    &::before {
+      left: -10%;
+      bottom: 20%;
+      @media #{$breakpointDisplayLarge} {
+        left: -30%;
+        bottom: 0%;
+      }
+    }
+  }
+
+  &--map {
+    background-color: $dark-accent;
+  }
+
+  &__title {
+    max-width: 1190px;
+    @media #{$breakpointDisplayLarge} {
+      max-width: 1100px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    line-height: normal;
+    text-transform: uppercase;
+    font-weight: 300;
+
+    @media #{$breakpointDisplayLarge} {
+      margin-top: 10px;
+    }
+    @media #{$breakpointDisplay} {
+      font-size: 24px;
+      line-height: 24px;
+      margin-top: 10px;
+    }
+    @media #{$breakpointMobile} {
+      font-size: 12px;
+    }
+  }
+
+  &__comment {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 18px;
+    @media #{$breakpointTablet} {
+     font-size: 14px;
+    }
+  }
+
+  &__table {
+    margin-top: 85px;
+    @media #{$breakpointDisplayLarge} {
+      margin-top: 74px;
+      margin-left: 10px;
+    }
+    @media #{$breakpointTablet} {
+      margin-top: 50px;
+      margin-left: -24px;
+      margin-right: -24px;
+    }
+    @media #{$breakpointMobile} {
+      margin-right: 0;
+      margin-left: 0;
+      margin-top: 40px;
+    }
+  }
+}

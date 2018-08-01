@@ -1,0 +1,44 @@
+.cloud {
+  overflow: hidden;
+  position: relative;
+}
+.cloud__content {
+  position: relative;
+  z-index:10;
+}
+
+.cloud__item {
+  left: 0;
+  top: 0;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+
+  &--l {
+    animation: animCloud 20s infinite linear;
+    height: 900px;
+    top: 50%;
+  }
+  &--m {
+    animation: animCloud 40s infinite linear;
+    height: 740px;
+    top: -50%;
+  }
+  &--s {
+    animation: animCloud 80s infinite linear;
+    height: 650px;
+    top: 20%;
+  }
+}
+
+@keyframes animCloud {
+  from {
+    transform: translateX(100%)
+  }
+  to {
+    transform: translateX(-100%)
+  }
+}
