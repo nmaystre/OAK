@@ -70,10 +70,12 @@ html(lang="en")
             include templates/components/main/screen6
 
             section.section.section--light
-                div.container
-                    div.show-for-tablet
+                div.container.grid__row.grid__row--tocol
+                    div.grid__item--fourth.section.section__aside
+                        p.heading.heading--s.heading--primary.section__aside-block.hide-for-tablet География деятельности
                         include templates/components/about/description
-                    include templates/components/about/facilities
+                    div.grid__item--threefourth
+                        include templates/components/about/facilities
 
             section.section.section--about-civil
                 div.container.section__inner

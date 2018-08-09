@@ -16,7 +16,9 @@
     }
 
     & .table__cell {
-      min-width: 160px;
+      @media #{$breakpointMobile} {
+        min-width: 160px;
+      }
     }
   }
 }

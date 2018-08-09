@@ -7,12 +7,12 @@
 }
 
 .facilities__wrp {
-  width: 1090px;
-  margin-left: auto;
-  @media #{$breakpointTablet} {
-    width: 100%;
-    margin: 0;
-  }
+  //width: 1090px;
+  //margin-left: auto;
+  //@media #{$breakpointTablet} {
+  //  width: 100%;
+  //  margin: 0;
+  //}
 }
 
 .facilities__col-1 {
@@ -37,7 +37,7 @@
   display: flex;
   align-items: flex-start;
   padding: 12px 12px 40px 12px;
-  @media #{$breakpointTablet} {
+  @media #{$breakpointMobile} {
     padding: 0;
   }
 }
