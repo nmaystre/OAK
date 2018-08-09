@@ -1,7 +1,11 @@
 .description {
   margin-top: 140px;
+  position: sticky;
+  top: 30%;
+  left: 0;
 
   @media #{$breakpointTablet} {
+    position: static;
     margin-top:0;
     display: flex;
     width: 100%;

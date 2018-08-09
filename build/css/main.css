@@ -2217,9 +2217,14 @@ img {
         height: 20px; } }
 
 .description {
-  margin-top: 140px; }
+  margin-top: 140px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30%;
+  left: 0; }
   @media screen and (max-width: 1239px) {
     .description {
+      position: static;
       margin-top: 0;
       display: -webkit-box;
       display: -ms-flexbox;
