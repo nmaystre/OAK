@@ -20,8 +20,6 @@ var myJsFiles          = ['js/*.js'];    // Holds the js files to be concatenate
 var fs                 = require('fs');  // ExistsSync var to check if font directory patch exist
 var bowerDirectory     = getBowerDirectory();
 var bootstrapJSPath    = bowerDirectory + "bootstrap/dist/js/bootstrap.min.js";
-var bootstrapCSSPath   = bowerDirectory + "bootstrap/dist/css/bootstrap.min.css";
-var bootstrapFontsPath = bowerDirectory + "bootstrap/dist/fonts/**.*";
 var jqueryPath         = bowerDirectory + "jquery/dist/jquery.min.js";
 var bootstrapExist     = false;
 var onError            = function(err) { // Custom error msg with beep sound and text color
@@ -71,28 +69,21 @@ gulp.task('styles', function() {
   .pipe(autoprefixer({
     browsers: ['last 5 versions'],
     cascade: false}))
-  .pipe(cleanCSS())
-  .pipe(rename({ suffix: '.min'}))
   .pipe(gulp.dest('build/css'));
+  gulp.src('styles/vendor/*.css')
+    .pipe(gulp.dest('build/css/vendor'));
+
 });
 
 gulp.task('templates', function() {
   gulp.src('./*.pug')
   .pipe(plumber({ errorHandler: onError }))
-  .pipe(pug())
+  .pipe(pug({
+    pretty: true
+  }))
   .pipe(gulp.dest('build/'));
 });
 
-// gulp.task('scripts', function() {
-//   return gulp.src(myJsFiles.concat(jsVendorFiles))
-//     .pipe(plumber({ errorHandler: onError }))
-//     .pipe(sourcemaps.init())
-//     .pipe(gconcat('bundle.js'))
-//     .pipe(uglify())
-//     .pipe(sourcemaps.write())
-//     .pipe(rename({ suffix: '.min'}))
-//     .pipe(gulp.dest('build/js'));
-// });
 
 gulp.task('vendorScripts', function() {
   return gulp.src(jsVendorFiles)

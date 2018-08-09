@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title
+        meta(name="description" content="")
+        link(rel="stylesheet" href="css/vendor/normalize.css")
+        link(rel="stylesheet" href="css/vendor/jquery.fullpage.min.css")
+        link(rel="stylesheet" href="css/main.css")
+
+        link(rel="stylesheet" href="css/vendor/ammap.css")
+
+    body
+        include templates/components/header-white
+        main
+            section.section-header.section-header--about
+                div.container.section-header__inner
+                    h3.section-header__heading.heading.heading--l.heading--list О корпорации
+
+            section.section.section--light
+                div.container.grid__row.grid__row--tocol
+                    aside.grid__item--fourth.section__aside
+                        div.section__aside-block
+                            p.caption.caption--l.
+                                Объединенная
+                                авиастроительная
+                                корпорация —
+                                один&nbsp;из&nbsp;лидеров
+                                на мировом рынке
+                                военной и гражданской
+                                авиационной техники.
+                        div.section__aside-block.section__aside-block--decorated.hide-for-tablet
+                            span.caption.caption--bold.caption--xxl 133
+                            p.caption.caption--m.caption--bold воздушных судна поставила Корпорация в 2017 году
+                    div.grid__item--threefourth
+                        p.caption.caption--m.caption--justify.
+                            Корпорация была создана в 2006 году в целях сохранения и развития
+                            научно-производственного потенциала авиастроительного комплекса
+                            Российской Федерации, обеспечения безопасности и обороноспособности
+                            государства, концентрации интеллектуальных, производственных и финансовых
+                            ресурсов для реализации перспективных программ создания авиационной техники.
+                        p.caption.caption--m.caption--justify.
+                            С 2007 года ОАК включена в перечень стратегических предприятий Российской
+                            Федерации, также Корпорация входит в число интегрированных структур
+                            отечественного оборонно-промышленного комплекса.
+                        p.caption.caption--m.caption--justify.
+                            Основные направления деятельности Корпорации — разработка, производство,
+                            реализация и послепродажное обслуживание гражданской, военной, транспортной
+                            и специальной авиационной техники, а также модернизация, ремонт и утилизация
+                            воздушных судов, подготовка кадров и повышение квалификации летного состава.
+                        p.caption.caption--m.caption--justify.
+                            Предприятия, входящие в контур ОАК, производят продукцию под такими
+                            всемирно известными брендами, как «Су», «МиГ», «Ил», «Ту», «Як»,
+                            МС-21, Superjet 100, «Бе» и другие.
+                        p.caption.caption--m.caption--justify.
+                            Основным акционером Корпорации является РФ в лице Федерального агентства
+                            по управлению государственным имуществом с долей в уставном капитале свыше 90%.
+                            Акции ПАО «ОАК» торгуются на Московской бирже под тикером UNAC.
+
+                        div.section__aside
+                            div.section__aside-block.section__aside-block--decorated.show-for-tablet
+                                span.caption.caption--bold.caption--xxl 133
+                                p.caption.caption--m.caption--bold воздушных судна поставила</br>Корпорация в 2017 году
+                div.container
+                    div.table__wrp
+                        include templates/components/about/table
+
+            include templates/components/main/screen6
+
+            section.section.section--light
+                div.container
+                    div.show-for-tablet
+                        include templates/components/about/description
+                    include templates/components/about/facilities
+
+            section.section.section--about-civil
+                div.container.section__inner
+                    div.grid__row.grid__row--tocol
+                        h3.heading.heading--xl Гражданская авиация
+                        div.section__details
+                            p.section__details-text Модельный ряд гражданской авиации
+                            p.section__details-heading MC-21
+                    div.features
+                        div.features__row.features__row--toright
+                            p.features__item.features__item--takeoff.features__item--s Cреднемагистральный узкофлюзеляжный самолет
+                            p.features__item.features__item--bold.features__item--plane.features__item--s Производство опытных образцов
+                            p.features__item.features__item--seat.features__item--s Вместимость 132-211 мест
+                    div.models
+                        div.models__row.js-planes-slider
+                            div.models__item
+                                div.models__img
+                                    img(src="../img/planes/SUPERJET100.png" alt="" height="120" width="200")
+                                h4.models__title Superjet 1000
+                                p.models__text
+                                    span Ближне-среднемагистральный узкофлюзеляжный самолет на&nbsp;
+                                    b 87-103 места
+                                p.models__text
+                                    b Серийное производство
+                            div.models__item
+                                div.models__img
+                                    img(src="../img/planes/CR929.png" alt="" height="120" width="200")
+                                h4.models__title CR929
+                                p.models__text
+                                    span Дальнемагистральный широкофлюзеляжный самолет на&nbsp;
+                                    b 210-350 мест
+                                p.models__text
+                                    b Инициация
+                                    span (переговоры с поставщиками)
+                            div.models__item
+                                div.models__img
+                                    img(src="../img/planes/IL114.png" alt="" height="120" width="200")
+                                h4.models__title Ил-114
+                                p.models__text
+                                    span Турбовинтовой региональный самолет на&nbsp;
+                                    b 52-64 места
+                                p.models__text
+                                    b Модернизация и перезапуск в производство
+                            div.models__item
+                                div.models__img
+                                    img(src="../img/planes/IL96-400.png" alt="" height="120" width="200")
+                                h4.models__title Ил-96-400М
+                                p.models__text Дальнемагистральный широкофлюзеляжный самолет на&nbsp;
+                                    b 305-370 мест
+                                p.models__text
+                                    b Модернизация и перезапуск в производство
+                        div.row
+                            div.models__special Государственная авиация специального назначения
+                            div.models__column.grid__item--toright
+                                div.models__upperline Модельный ряд государственной авиации специального назначения
+                                div.models__row.js-planes-slider
+                                    div.models__item
+                                        div.models__img
+                                            img(src="../img/planes/AN148.png" alt="" height="120" width="200")
+                                        h4.models__title Ан-148
+                                        p.models__text
+                                            span Региональный самолет на&nbsp;
+                                            b 68-80 мест
+                                        p.models__text
+                                            b Серийное производство
+                                    div.models__item
+                                        div.models__img
+                                            img(src="../img/planes/TU204.png" alt="" height="120" width="200")
+                                        h4.models__title Ту-2014/214/ 204CM
+                                        p.models__text
+                                            span Cреднемагистральный узкофлюзеляжный самолет на&nbsp;
+                                                b 210 мест
+                                        p.models__text
+                                            b Серийное производство
+                                    div.models__item
+                                        div.models__img
+                                            img(src="../img/planes/IL96.png" alt="" height="120" width="200")
+                                        h4.models__title Ил-96
+                                        span Дальнемагистральный широкофлюзеляжный самолет на&nbsp;
+                                            b 257-289 мест
+                                        p.models__text
+                                            b Серийное производство
+
+
+            section.section.section--about-military
+                div.container.section__inner
+                    div.grid__row.grid__row--tocol
+                        h3.heading.heading--xl Военная авиация
+                        div.section__details
+                            p.section__details-text Модельный ряд военной авиации
+                            p.section__details-heading Су-57
+                    div.features
+                        div.features__row
+                            p.features__item.features__item--takeoff Тяжелый многофункциональный истребитель 5-го поколения
+                            p.features__item.features__item--bold.features__item--plane Производство опытных образцов
+                    div.models
+                        div.models__row.js-planes-slider
+                            div.models__item
+                                div.models__img
+                                    img(src="../img/planes/MIG29.png" alt="" height="120" width="200")
+                                h4.models__title МиГ-29
+                                p.models__text
+                                    span Средний многофункциональный истребитель поколения&nbsp;
+                                    b 4+
+                                p.models__text
+                                    span Максимальная нагрузка – &nbsp;
+                                    b 4,5т
+                                p.models__text
+                                    b Серийное производство
+                            div.models__item
+                                div.models__img
+                                    img(src="../img/planes/SU30.png" alt="" height="120" width="200")
+                                h4.models__title Су-30
+                                p.models__text
+                                    span Средний многофункциональный истребитель поколения&nbsp;
+                                    b 4+
+                                p.models__text
+                                    span Максимальная нагрузка – &nbsp;
+                                    b 8т
+                                p.models__text
+                                    b Серийное производство
+                            div.models__item
+                                div.models__img
+                                    img(src="../img/planes/SU34.png" alt="" height="120" width="200")
+                                h4.models__title Су-34
+                                    p.models__text
+                                        span Тяжелый фронтовой истребитель-бомбардировщик поколения&nbsp;
+                                        b 4+
+                                    p.models__text
+                                        span Максимальная нагрузка – &nbsp;
+                                        b 4,5т
+                                    p.models__text
+                                        b Серийное производство
+                        div.models__row.js-planes-slider
+                            div.models__item
+                                div.models__img
+                                    img(src="../img/planes/MIG35.png" alt="" height="120" width="200")
+                                h4.models__title МиГ-35
+                                p.models__text
+                                    span Средний многофункциональный истребитель поколения&nbsp;
+                                    b 4++
+                                p.models__text
+                                    span Максимальная нагрузка – &nbsp;
+                                    b 4,5т
+                                p.models__text
+                                    b Разработка и испытания
+                            div.models__item
+                                div.models__img
+                                    img(src="../img/planes/SU35.png" alt="" height="120" width="200")
+                                h4.models__title Су-35
+                                p.models__text
+                                    span Тяжелый многофункциональный истребитель поколения&nbsp;
+                                    b 4++
+                                p.models__text
+                                    span Максимальная нагрузка – &nbsp;
+                                    b 8т
+                                p.models__text
+                                    b Серийное производство
+                            div.models__item
+                                div.models__img
+                                    img(src="../img/planes/TU160.png" alt="" height="120" width="200")
+                                h4.models__title Ту-160
+                                    p.models__text
+                                        span Стратегический бомбардировщик-ракетоносец
+                                    p.models__text
+                                        b Модернизация и перезапуск в производство
+                        div.models__row.js-planes-slider
+                            div.models__item
+                                div.models__img
+                                    img(src="../img/planes/PAK-DA.png" alt="" height="120" width="200")
+                                h4.models__title МиГ-35
+                                p.models__text
+                                    span Стратегический бомбардировщик-ракетоносец
+                                p.models__text
+                                    b Разработка
+                            div.models__item
+                                div.models__img
+                                    img(src="../img/planes/YAK130.png" alt="" height="120" width="200")
+                                h4.models__title Як-130
+                                p.models__text
+                                    span Учебно-боевой и тренировочный самолет
+                                    b 4++
+                                p.models__text
+                                    span Максимальная нагрузка – &nbsp;
+                                    b 3т
+                                p.models__text
+                                    b Серийное производство
+                            div.models__item
+                                div.models__img
+                                    img(src="../img/planes/YAK152.png" alt="" height="120" width="200")
+                                h4.models__title Як-152
+                                    p.models__text
+                                        span Учебно-тренировочный самолет
+                                    p.models__text
+                                        b Развертывание производства
+
+            section.section.section--about-transport
+                div.container.section__inner
+                    div.grid__row.grid__row--tocol
+                        h3.heading.heading--l Транспортная и&nbsp;специальная авиация
+                        div.section__details
+                            p.section__details-text Модельный ряд гражданской авиации
+                            p.section__details-heading.section__details-heading--s  Ил-76МД -90А
+                    div.features
+                        div.features__row
+                            p.features__item.features__item--takeoff Тяжелый военно-транспортный самолет
+                            p.features__item.features__item--bold.features__item--plane Серийное производство
+                            p.features__item.features__item--weight Максимальная нагрузка&nbsp;–&nbsp;
+                                b 60 т
+                    div.models
+                        div.models__row.js-planes-slider
+                            div.models__item
+                                div.models__img
+                                    img(src="../img/planes/IL112.png" alt="" height="120" width="200")
+                                h4.models__title Ил-112В
+                                p.models__text
+                                    span Легкий военно-транспортный самолет
+                                p.models__text
+                                    span Максимальная нагрузка – &nbsp;
+                                    b 5т
+                                p.models__text
+                                    b Сборка первых летных образцов
+                            div.models__item
+                                div.models__img
+                                    img(src="../img/planes/CBTC.png" alt="" height="120" width="200")
+                                h4.models__title CBTC
+                                p.models__text
+                                    span Средний военно-транспортный самолет
+                                p.models__text
+                                    span Максимальная нагрузка – &nbsp;
+                                    b 20т
+                                p.models__text
+                                    b Проектирование
+                            div.models__item
+                                div.models__img
+                                    img(src="../img/planes/BE200.png" alt="" height="120" width="200")
+                                h4.models__title  Бе-200
+                                    p.models__text
+                                        span Многофункциональный самолет-амфибия
+                                    p.models__text
+                                        span Максимальная нагрузка – &nbsp;
+                                        b 12т
+                                    p.models__text
+                                        b Серийное производство
+
+
+            section.section--light
+                div.container
+                    div.grid__row.grid__row--tocol
+                        p.heading.heading--s.heading--primary.section__aside.section__aside-block.
+                            Первый полет</br>
+                            МС-21
+                        div.grid__item--threefourth
+                            p.caption.caption--m.caption--justify.
+                                Один из ключевых проектов Объединенной авиастроительной корпорации — МС-21,
+                                пассажирский лайнер нового поколения, ориентированный на самый массовый
+                                сегмент рынка авиаперевозок. Первый полет МС-21 состоялся 28 мая 2017 года
+                                на аэродроме Иркутского авиационного завода. Полет продолжительностью 30
+                                минут проходил на высоте 1 000 метров при скорости 300 км/ч. Самолет
+                                пилотировал экипаж в составе летчика-испытателя, Героя России Олега Кононенко
+                                и летчика-испытателя, Героя России Романа Таскаева. Опытный экземпляр был
+                                успешно проверен на устойчивость и управляемость, а также на управляемость
+                                двигателей: все самолетные системы работали без сбоев, были подтверждены
+                                характеристики и режимы работы двигателей.
+                            p.caption.caption--m.caption--justify.
+                                Второй этап летных заводских доводочных испытаний МС-21-300 начался в сентябре
+                                2017 года. Основной целью второго этапа летных испытаний было расширение
+                                диапазона полетов по массе, центровке, скорости и высоте. В ходе полетов
+                                доработанные системы самолета работали без замечаний. Самолет МС-21 создается в
+                                кооперации c целым рядом предприятий ОАК: ПАО «Корпорация «Иркут», АО
+                                «АэроКомпозит», АО «Авиастар-СП», ПАО «ВАСО», ООО «ОАК — Центр комплексирования»
+                                и другими. При разработке МС-21 были внедрены самые передовые технические решения,
+                                которые обеспечат повышенный комфорт пассажирам и привлекательные экономические
+                                характеристики авиакомпаниям.
+            section.section--about-future
+                div.container.grid__row.grid__row--tocol
+                    div.grid__item--third.section__aside.section__aside--light
+                        p.caption.caption--l.section__aside-block.section__aside-block--l.
+                            Это не просто полет нового
+                            самолета, это появление
+                            нового продукта, который
+                            на ближайшие 50 лет
+                            определит облик российского
+                            гражданского авиастроения.</br>
+                            По нашим оценкам,
+                            в&nbsp;ближайшие 20 лет в сегменте
+                            МС-21 мировой спрос составит
+                            около 15 000 новых лайнеров.
+                            Уверен,авиакомпании высоко
+                            оценят наш новый самолет.
+                    div.grid__item--twothird
+                        p.caption.caption--m.caption--justify.
+                            Так, МС-21 будет иметь самый большой диаметр фюзеляжа в классе узкофюзеляжных самолетов,
+                            что обеспечит качественно новый уровень комфорта: расширит личное пространство каждого
+                            пассажира, позволит разминуться с тележкой обслуживания и обеспечит авиакомпаниям
+                            сокращение времени оборота в аэропортах. Среди других нововведений — установка больших
+                            иллюминаторов, которые увеличат естественную освещенность пассажирского салона. Также в
+                            самолете будет поддерживаться комфортное для пассажиров давление воздуха и улучшенный
+                            микроклимат. Для пилотов самолетов МС-21 разработана инновационная эргономичная кабина.
+
+                        p.caption.caption--m.caption--justify.
+                            Кроме того, передовые технические решения были внедрены в области аэродинамики,
+                            двигателестроения и самолетных систем. Крыло из высокопрочных композиционных материалов,
+                            впервые в мире созданное для узкофюзеляжных самолетов вместимостью свыше 130 пассажиров,
+                            улучшит летно-технические характеристики лайнера. Инновационные решения в двигателе
+                            сократят потребление топлива, а также вредные выбросы и шум, обеспечивая более высокую
+                            крейсерскую скорость. Использование современных материалов также позволит заметно
+                            снизить вес самолета.
+
+            section.section--light
+                div.container
+                    div.contents
+                        a.contents__next(href="#") Далее
+                        p.contents__text.
+                            ОБРАЩЕНИЕ ПРЕДСЕДАТЕЛЯ
+                            СОВЕТА ДИРЕКТОРОВ ПАО «ОАК»
+                        a.contents__back(href="#") Оглавление
+
+            div.scroll-top
+                a(href="#")
+                    span.visually-hidden Scroll to top
+
+
+    script(src="js/vendor/jquery.min.js")
+    script(src="js/vendor/jquery.fullpage.min.js")
+    script(src="js/vendor/slick.min.js")
+
+    script(src="js/vendor/ammap.js" type="text/javascript")
+    script(src="js/vendor/worldRussiaSplitLow.js" type="text/javascript")
+    script(src="js/vendor/script-ammap.js" type="text/javascript")
+    script(src="js/bundle.min.js")

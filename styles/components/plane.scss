@@ -1,0 +1,27 @@
+.plane__item {
+  left: 20%;
+  top: 20%;
+  position: absolute;
+  z-index: -1;
+  user-select: none;
+  pointer-events: none;
+
+  &--l {
+    animation: animPlane 10s infinite linear alternate-reverse;
+    width: 60%;
+    top: 20%;
+    left: 30%;
+
+    @media #{$breakpointTablet} {
+      width: 90%;
+      top: 30% ;
+      left:10%;
+    }
+    @media #{$breakpointMobile} {
+      width: 120%;
+      top: 30%;
+      left: -20%;
+      right: 0;
+    }
+  }
+}

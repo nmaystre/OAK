@@ -2,6 +2,8 @@ $black: #000000;
 $white: #ffffff;
 
 $primary: #173d8c;
+$primary-lighten: #194487;
+$primary-lightest: #2f4f9c;
 $secondary: #ef2e24;
 $thirdly: #6a747b;
 
@@ -18,15 +20,9 @@ $light-accent: #6dabdf;
 $dark-accent: #363674;
 
 
-//$breakpointDisplay: 'screen and (max-width: 1919px)';
-
-//$breakpointDisplay: 'screen and (max-width: 1240px)';
-//$breakpointDisplaySmall: 'screen and (max-width: 1240px)';
-//$breakpointTablet: 'screen and (max-width: 1239px)';
-//$breakpointMobile: 'screen and (max-width: 767px)';
-
 $breakpointDisplayLarge: 'screen and (min-width: 1240px) and (min-height: 960px) and (max-height: 1200px)';
 $breakpointDisplay: 'screen and (min-width: 1240px)';
-//$breakpointDisplay: 'screen and (min-width: 1240px) and (min-height: 720px) and (max-height: 959px)';
 $breakpointTablet: 'screen and (max-width: 1239px)';
 $breakpointMobile: 'screen and (max-width: 767px)';
+
+$gapLg: 80px;

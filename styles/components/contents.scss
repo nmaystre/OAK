@@ -1,0 +1,88 @@
+.contents {
+  width: 645px;
+  margin: auto;
+  color: $primary;
+  @media #{$breakpointMobile} {
+    width: 100%;
+  }
+}
+
+.contents__text {
+  text-transform: uppercase;
+  color: $primary;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 50px 0;
+  @media #{$breakpointMobile} {
+   font-size: 18px;
+
+  }
+}
+
+.contents__next {
+  font-size: 18px;
+  color: $primary;
+  text-decoration: none;
+}
+
+.contents__next {
+  position: relative;
+  font-size: 18px;
+  color: $primary;
+  text-decoration: none;
+  padding-right: 55px;
+  transition: all 0.2s linear;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0;
+    width: 43px;
+    height: 100%;
+    background-image: url('../img/icons/next-page.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    transition: all 0.2s linear;
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+.contents__back {
+  position: relative;
+  font-size: 18px;
+  color: $gray-lighten;
+  text-decoration: none;
+  font-weight: 700;
+  padding-left: 50px;
+  transition: all 0.2s linear;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: -12px;
+    width: 40px;
+    height: 40px;
+    background-image: url('../img/icons/book.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    transition: all 0.2s linear;
+    opacity: 0.7;
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}

@@ -11,6 +11,7 @@
     background-repeat: no-repeat;
     cursor: pointer;
     z-index: 5;
+
     @media #{$breakpointMobile} {
       margin-top: -100px;
       height: 50px;
@@ -36,6 +37,15 @@
       }
     }
 
+    &--next.gray {
+      background-image: url(../img/icons/next-lightgray.png);
+    }
+
+    &--prev.gray {
+      background-image: url(../img/icons/prev-lightgray.png);
+    }
+
+
     &--table {
       margin-top: 8px;
       height: 40px;
@@ -45,12 +55,20 @@
     }
   }
 
+  &__arrow.planes {
+    top: 90px;
+  }
+
 
   &__arrow[aria-disabled="true"] {
     display: none !important;
   }
 }
 
-.slick-slider .slick-list {
+.slick-slider * {
+  outline: none;
+}
+
+.slick-slider.table-slider-mobile .slick-list {
   margin-bottom: 20px;
 }

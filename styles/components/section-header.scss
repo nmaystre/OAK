@@ -1,0 +1,22 @@
+.section-header {
+  
+  &--about {
+    background-image: url(../img/bg-about-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.section-header__inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 640px;
+  padding-top: $gapLg;
+  padding-bottom: $gapLg;
+}
+
+.section-header__heading {
+  margin: auto 0;
+
+}

@@ -1,0 +1,26 @@
+@keyframes animPlane {
+  from {
+    transform: translateY(25%)
+  }
+  to {
+    transform: translateY(15%)
+  }
+}
+
+@keyframes animCloud {
+  from {
+    transform: translateX(180%)
+  }
+  to {
+    transform: translateX(-180%)
+  }
+}
+
+@keyframes animCloud2 {
+  from {
+    transform: translateX(100%)
+  }
+  to {
+    transform: translateX(-100%)
+  }
+}

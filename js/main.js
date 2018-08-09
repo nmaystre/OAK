@@ -25,7 +25,6 @@ $(document).ready(function () {
     });
   }
 
-
   // search input desktop
 
   var searchOpen = false;
@@ -34,6 +33,7 @@ $(document).ready(function () {
   var $headerNav = $(".js-header__nav");
   var $searchInput = $(".js-search__input");
   var $headerLogo = $(".js-header__logo");
+  var $headerWNav = $(".js-header__wnav");
 
   $searchBtn.click(function (e) {
     e.preventDefault();
@@ -45,6 +45,7 @@ $(document).ready(function () {
       if ($window.width() < 1239) {
         $headerLogo.fadeOut();
       }
+      $headerWNav.fadeOut();
       setTimeout(function () {
         $searchWrp.addClass("search--open");
       }, 500);
@@ -59,11 +60,17 @@ $(document).ready(function () {
       if ($window.width() > 1919) {
         setTimeout(function () {
           $headerNav.fadeIn();
+          $headerWNav.fadeIn();
         }, 500);
       }
       if ($window.width() < 1239) {
         setTimeout(function () {
           $headerLogo.fadeIn();
+        }, 500);
+      }
+      if ($window.width() > 768) {
+        setTimeout(function () {
+          $headerWNav.fadeIn();
         }, 500);
       }
       return false;
@@ -188,6 +195,8 @@ $(document).ready(function () {
 
   var $carouselTablet = $('.slider-circle-nav');
   var $carouselTableMobile = $('.table-slider-mobile');
+  var $carouselTableWhiteMobile = $('.js-table-white-slider');
+  var $planesSliderMobile = $('.js-planes-slider');
 
   toggleSlick = function () {
     if ($window.width() < 1239) {
@@ -228,9 +237,110 @@ $(document).ready(function () {
         cssEase: 'ease-in-out',
       });
     }
+
+    if ($window.width() < 768) {
+      $carouselTableWhiteMobile.slick({
+        focusOnSelect: false,
+        dots: false,
+        arrows: true,
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: false,
+        draggable: true,
+        touchMove: true,
+        prevArrow: '<a class="slider__arrow slider__arrow--prev slider__arrow--table gray" aria-label="Previous"></a>',
+        nextArrow: '<a class="slider__arrow slider__arrow--next slider__arrow--table gray" aria-label="Next"></a>',
+        speed: 400,
+        autoplay: false,
+        fade: false,
+        cssEase: 'ease-in-out',
+      });
+    }
+
+    if ($window.width() < 768) {
+      $planesSliderMobile.slick({
+        focusOnSelect: false,
+        dots: false,
+        arrows: true,
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: false,
+        draggable: true,
+        touchMove: true,
+        prevArrow: '<a class="slider__arrow slider__arrow--prev slider__arrow--table planes" aria-label="Previous"></a>',
+        nextArrow: '<a class="slider__arrow slider__arrow--next slider__arrow--table planes" aria-label="Next"></a>',
+        speed: 400,
+        autoplay: false,
+        fade: false,
+        cssEase: 'ease-in-out',
+      });
+    }
+
+  // sync sliders in facilities
+  if ($window.width() < 768) {
+    $('.facilities__slider').slick({
+      focusOnSelect: false,
+      dots: false,
+      arrows: false,
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      variableWidth: false,
+      draggable: false,
+      touchMove: false,
+      prevArrow: '<a class="slider__arrow slider__arrow--prev slider__arrow--table" aria-label="Previous"></a>',
+      nextArrow: '<a class="slider__arrow slider__arrow--next slider__arrow--table" aria-label="Next"></a>',
+      speed: 200,
+      autoplay: false,
+      fade: false,
+      cssEase: 'ease-in-out',
+      asNavFor: '.facilities__slider, .facilities__header-slider',
+    });
+    $('.facilities__header-slider').slick({
+      focusOnSelect: false,
+      dots: false,
+      arrows: true,
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      variableWidth: false,
+      draggable: false,
+      touchMove: false,
+      prevArrow: '<a class="slider__arrow slider__arrow--prev slider__arrow--table" aria-label="Previous"></a>',
+      nextArrow: '<a class="slider__arrow slider__arrow--next slider__arrow--table" aria-label="Next"></a>',
+      speed: 200,
+      autoplay: false,
+      fade: false,
+      cssEase: 'ease-in-out',
+      asNavFor: '.facilities__slider',
+    });
+  }
+
   };
 
   $window.resize(toggleSlick);
   toggleSlick();
+
+  // smooth scroll
+
+  $('.scroll-top a').each(function(){
+    $(this).click(function(){
+      $('html,body').animate({ scrollTop: 0 }, 'slow');
+      return false;
+    });
+
+    $(window).scroll(function(){
+      if ($(this).scrollTop() > 500) {
+        $('.scroll-top').fadeIn();
+      } else {
+        $('.scroll-top').fadeOut();
+      }
+    });
+
+  });
+
+
 
 });

@@ -1,7 +1,7 @@
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1220px;
   padding-left: 195px;
   padding-right: 195px;
   margin: 0 auto;
@@ -38,21 +38,41 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    &--tocol {
+      @media #{$breakpointTablet} {
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+    }
   }
 
   &__item {
+
+    &--toright {
+      margin-left: auto;
+    }
+
+    &--toleft {
+      margin-right: auto;
+    }
 
     &--half {
       width: 48.571429%;
     }
 
     &--third {
-      max-width: 33.33333%;
-      width: 33.33333%;
+      max-width: 36.475409%;
+      width: 36.475409%;
     }
 
     &--twothird {
-      width: 65.7142857%;
+      width: 61.70492%;
+      max-width: 61.70492%;
+      @media #{$breakpointTablet} {
+        width: 100%;
+        min-width: 100%;
+      }
     }
 
     &--fourth {
@@ -61,7 +81,11 @@
     }
 
     &--threefourth {
-      //max-width: 936px;
+      max-width: 895px;
+      @media #{$breakpointTablet} {
+        max-width: inherit;
+        width: 100%;
+      }
     }
   }
 }
@@ -83,5 +107,12 @@
     display: none !important;
   }
 }
+
+.hide-for-mobile {
+  @media #{$breakpointMobile} {
+    display: none !important;
+  }
+}
+
 
 

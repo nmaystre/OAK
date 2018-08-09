@@ -2,9 +2,22 @@
 
   margin: 0;
 
-  &--l {
+  &--xl {
     font-size: 102px;
     line-height: 102px;
+    @media #{$breakpointTablet} {
+      font-size: 88px;
+      line-height: 88px;
+      margin-bottom: 10px;
+    }
+    @media #{$breakpointMobile} {
+      font-size: 38px;
+      line-height: normal;
+      margin-bottom: 20px;
+    }
+  }
+
+  &--l {
 
     @media #{$breakpointDisplayLarge} {
       font-size: 100px;
@@ -19,7 +32,7 @@
       line-height: 89px;
     }
     @media #{$breakpointMobile} {
-      font-size: 42px;
+      font-size: 40px;
       line-height: 50px;
       margin-bottom: 10px;
     }
@@ -47,6 +60,95 @@
       font-size: 42px;
       line-height: 48px;
       margin-bottom: 10px;
+    }
+  }
+
+  &--s {
+    font-size: 36px;
+    margin: 0;
+  }
+
+  &--list {
+    position: relative;
+    padding-left: 60px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 30px;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background-image: url(../img/icons/red-dot.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--primary {
+    color: $primary;
+  }
+}
+
+.caption {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 0;
+  margin-bottom: 25px;
+
+  &--xxl {
+    font-size: 72px;
+    line-height: 72px;
+  }
+
+  &--l {
+    font-size: 28px;
+    line-height: normal;
+  }
+
+  &--m {
+    font-size: 17px;
+    line-height: 26px;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--justify {
+    text-align: justify;
+    overflow-wrap: break-word;
+  }
+
+
+  &--decor-red {
+    position: relative;
+    padding-left: 20px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      bottom: 0;
+      height: 13px;
+      width: 13px;
+      background-color: $accent;
+      border-radius: 50%;
+    }
+  }
+  &--decor-blue {
+    position: relative;
+    padding-left: 20px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      bottom: 0;
+      height: 13px;
+      width: 13px;
+      background-color: $light-accent;
+      border-radius: 50%;
     }
   }
 }

@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title></title>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="css/vendor/normalize.css"/>
+    <link rel="stylesheet" href="css/vendor/jquery.fullpage.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/vendor/ammap.css"/>
+  </head>
+  <body>
+    <header class="header header--white" id="header">
+      <div class="header__inner container">
+        <div class="header__row"><a class="header__logo js-header__logo" href="#"><img src="img/logo-color-white.png" width="374" height="62"/></a><a class="header__section" href="#">О корпорации</a>
+          <ul class="header__nav js-header__wnav">
+            <li class="header__nav-item"><a class="header__nav-link header__nav-link--book" href="#"><span class="visually-hidden">Оглавление</span></a></li>
+            <li class="header__nav-item"><a class="header__nav-link header__nav-link--download" href="#"><span class="visually-hidden">Скачать PDF-версию</span></a></li>
+            <li class="header__nav-item"><a class="header__nav-link header__nav-link--feedback" href="#"><span class="visually-hidden"> Обратная связь</span></a></li>
+            <li class="header__nav-item"><a class="header__nav-link header__nav-link--map" href="#"><span class="visually-hidden">Карта сайта</span></a></li>
+            <li class="header__nav-item"><a class="header__nav-link header__nav-link--fav" href="#"><span class="visually-hidden"> Избранное</span></a></li>
+          </ul>
+          <div class="header__search">
+            <form class="search js-search">
+              <input class="search__input js-search__input" type="search" placeholder="Что Вы хотите найти?"/>
+              <button class="search__btn js-search__btn"><span class="visually-hidden">Искать</span></button>
+            </form>
+          </div>
+          <div class="header__sidebar-links"><a class="hamburger hamburger--main" href="#"><span class="hamburger__icon"></span><span class="visually-hidden">Открыть меню</span></a><a class="header__lang" href="#">En</a></div>
+        </div>
+      </div>
+      <div class="header__menu menu">
+        <div class="menu__inner">
+          <div class="show-for-tablet">
+            <div class="menu__column menu__column--topbar"><a class="menu__close js-menu__close" href="#"></a><a class="menu__back js-menu__back" href="#"></a><a class="menu__logo js-menu__logo" href="#">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/logo-color.png"/>
+                  <source media="(min-width: 320px)" srcset="img/logo-color-small.png"/><img src="img/logo-color.png" width="372" height="61"/>
+                </picture></a>
+              <div class="menu__search">
+                <form class="search search--menu js-msearch">
+                  <input class="search__input js-msearch__input" type="search" placeholder="Что Вы хотите найти?"/>
+                  <button class="search__btn js-msearch__btn"><span class="visually-hidden">Искать</span></button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="menu__column menu__column--links"><a class="menu__logo hide-for-tablet" href="#"><img src="img/logo-color.png" width="372" height="61"/></a>
+            <ul class="menu__nav">
+              <li class="menu__nav-item"><a class="menu__nav-link menu__nav-link--book" href="#">Оглавление</a></li>
+              <li class="menu__nav-item"><a class="menu__nav-link menu__nav-link--download" href="#">Скачать PDF-версию</a></li>
+              <li class="menu__nav-item"><a class="menu__nav-link menu__nav-link--feedback" href="#">Обратная связь</a></li>
+              <li class="menu__nav-item"><a class="menu__nav-link menu__nav-link--map" href="#">Карта сайта</a></li>
+              <li class="menu__nav-item"><a class="menu__nav-link menu__nav-link--fav" href="#">Избранное</a></li>
+            </ul>
+          </div>
+          <div class="menu__contents row js-menu">
+            <div class="menu__column menu__column--nav grid__item js-menu-column">
+              <p class="menu__block js-mob-menu-block"><a class="menu__link menu__link--subtitle js-mob-menu-subtitle" href="#">О Корпорации</a><a class="menu__link js-mob-menu-link" href="#">Обращение Председателя Совета&nbsp;директоров ПАО&nbsp;«ОАК»</a><a class="menu__link js-mob-menu-link" href="#">Обращение Президента, Председателя&nbsp;Правления ПАО&nbsp;«ОАК»</a></p>
+              <p class="menu__block js-mob-menu-block"><a class="menu__link menu__link--subtitle js-mob-menu-subtitle" href="#">Стратегия</a><a class="menu__link js-mob-menu-link" href="#">Положение ОАК на рынке</a><a class="menu__link js-mob-menu-link" href="#">Стратегия и бизнес-модель</a><a class="menu__link js-mob-menu-link" href="#">Инвестиционная программа</a><a class="menu__link js-mob-menu-link" href="#">Самолетостроительные проекты</a><a class="menu__link js-mob-menu-link" href="#">Инновации и НИОКР</a></p>
+              <p class="menu__block js-mob-menu-block"><a class="menu__link menu__link--subtitle js-mob-menu-subtitle" href="#">Устойчивое развитие</a><a class="menu__link js-mob-menu-link" href="#">Кадровая политика</a><a class="menu__link js-mob-menu-link" href="#">Охрана окружающей среды</a><a class="menu__link js-mob-menu-link" href="#">Социальные проекты и благотворительность</a></p>
+            </div>
+            <div class="menu__column menu__column--nav grid__item js-menu-column">
+              <p class="menu__block js-mob-menu-block"><a class="menu__link menu__link--subtitle js-mob-menu-subtitle" href="#">Корпоративное управление</a><a class="menu__link js-mob-menu-link" href="#">Система корпоративного управления&nbsp;ОАК</a><a class="menu__link js-mob-menu-link" href="#">Ценные бумаги</a></p>
+              <p class="menu__block js-mob-menu-block"><a class="menu__link menu__link--subtitle js-mob-menu-subtitle" href="#">Приложения</a><a class="menu__link js-mob-menu-link" href="#">Приложение 1. Управление рисками</a><a class="menu__link js-mob-menu-link" href="#">Приложение 2. Глоссарий и сокращения</a><a class="menu__link js-mob-menu-link" href="#">Приложение 3. Заявление об ограничении ответственности</a></p>
+              <p class="menu__block js-mob-menu-block"><a class="menu__link menu__link--subtitle js-mob-menu-subtitle" href="#">Контактная информация</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section-header section-header--about">
+        <div class="container section-header__inner">
+          <h3 class="section-header__heading heading heading--l heading--list">О корпорации</h3>
+        </div>
+      </section>
+      <section class="section section--light">
+        <div class="container grid__row grid__row--tocol">
+          <aside class="grid__item--fourth section__aside">
+            <div class="section__aside-block">
+              <p class="caption caption--l">
+                Объединенная
+                авиастроительная
+                корпорация —
+                один&nbsp;из&nbsp;лидеров
+                на мировом рынке
+                военной и гражданской
+                авиационной техники.
+              </p>
+            </div>
+            <div class="section__aside-block section__aside-block--decorated hide-for-tablet"><span class="caption caption--bold caption--xxl">133</span>
+              <p class="caption caption--m caption--bold">воздушных судна поставила Корпорация в 2017 году</p>
+            </div>
+          </aside>
+          <div class="grid__item--threefourth">
+            <p class="caption caption--m caption--justify">
+              Корпорация была создана в 2006 году в целях сохранения и развития
+              научно-производственного потенциала авиастроительного комплекса
+              Российской Федерации, обеспечения безопасности и обороноспособности
+              государства, концентрации интеллектуальных, производственных и финансовых
+              ресурсов для реализации перспективных программ создания авиационной техники.
+            </p>
+            <p class="caption caption--m caption--justify">
+              С 2007 года ОАК включена в перечень стратегических предприятий Российской
+              Федерации, также Корпорация входит в число интегрированных структур
+              отечественного оборонно-промышленного комплекса.
+            </p>
+            <p class="caption caption--m caption--justify">
+              Основные направления деятельности Корпорации — разработка, производство,
+              реализация и послепродажное обслуживание гражданской, военной, транспортной
+              и специальной авиационной техники, а также модернизация, ремонт и утилизация
+              воздушных судов, подготовка кадров и повышение квалификации летного состава.
+            </p>
+            <p class="caption caption--m caption--justify">
+              Предприятия, входящие в контур ОАК, производят продукцию под такими
+              всемирно известными брендами, как «Су», «МиГ», «Ил», «Ту», «Як»,
+              МС-21, Superjet 100, «Бе» и другие.
+            </p>
+            <p class="caption caption--m caption--justify">
+              Основным акционером Корпорации является РФ в лице Федерального агентства
+              по управлению государственным имуществом с долей в уставном капитале свыше 90%.
+              Акции ПАО «ОАК» торгуются на Московской бирже под тикером UNAC.
+              
+            </p>
+            <div class="section__aside">
+              <div class="section__aside-block section__aside-block--decorated show-for-tablet"><span class="caption caption--bold caption--xxl">133</span>
+                <p class="caption caption--m caption--bold">воздушных судна поставила</br>Корпорация в 2017 году</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="table__wrp">
+            <div class="table table--highlighed js-table-white-slider">
+              <div class="table__column">
+                <p class="table__cell table__cell--filled table__cell--ml">Показатель</p>
+                <div class="table__block">
+                  <p class="table__cell table__cell--ml table__cell--b">Гражданская авиация</p>
+                  <p class="table__cell table__cell--ml">в т.&nbsp;ч. внутренний рынок</p>
+                  <p class="table__cell table__cell--ml">экспорт</p>
+                </div>
+                <div class="table__block">
+                  <p class="table__cell table__cell--ml table__cell--b">Военная авиация</p>
+                  <p class="table__cell table__cell--ml">в т.&nbsp;ч. внутренний рынок</p>
+                  <p class="table__cell table__cell--ml">экспорт</p>
+                </div>
+                <div class="table__block">
+                  <p class="table__cell table__cell--ml table__cell--b">Транспортная и&nbsp;спец авиация</p>
+                  <p class="table__cell table__cell--ml">в т.&nbsp;ч. внутренний рынок</p>
+                  <p class="table__cell table__cell--ml">экспорт</p>
+                </div>
+                <p class="table__cell table__cell--filled table__cell--ml">Итого</p>
+              </div>
+              <div class="table__column">
+                <p class="table__cell table__cell--filled">2013</p>
+                <div class="table__block">
+                  <p class="table__cell table__cell--b">32</p>
+                  <p class="table__cell">18</p>
+                  <p class="table__cell">14</p>
+                </div>
+                <div class="table__block">
+                  <p class="table__cell table__cell--b">79</p>
+                  <p class="table__cell">54</p>
+                  <p class="table__cell">25</p>
+                </div>
+                <div class="table__block">
+                  <p class="table__cell table__cell--b">—</p>
+                  <p class="table__cell">—</p>
+                  <p class="table__cell">—</p>
+                </div>
+                <p class="table__cell table__cell--filled">111</p>
+              </div>
+              <div class="table__column">
+                <p class="table__cell table__cell--filled">2014</p>
+                <div class="table__block">
+                  <p class="table__cell table__cell--b">35</p>
+                  <p class="table__cell">26</p>
+                  <p class="table__cell">9</p>
+                </div>
+                <div class="table__block">
+                  <p class="table__cell table__cell--b">124</p>
+                  <p class="table__cell">102</p>
+                  <p class="table__cell">22</p>
+                </div>
+                <div class="table__block">
+                  <p class="table__cell table__cell--b">—</p>
+                  <p class="table__cell">—</p>
+                  <p class="table__cell">—</p>
+                </div>
+                <p class="table__cell table__cell--filled">159</p>
+              </div>
+              <div class="table__column">
+                <p class="table__cell table__cell--filled">2015</p>
+                <div class="table__block">
+                  <p class="table__cell table__cell--b">30</p>
+                  <p class="table__cell">25</p>
+                  <p class="table__cell">5</p>
+                </div>
+                <div class="table__block">
+                  <p class="table__cell table__cell--b">124</p>
+                  <p class="table__cell">90</p>
+                  <p class="table__cell">343</p>
+                </div>
+                <div class="table__block">
+                  <p class="table__cell table__cell--b">2</p>
+                  <p class="table__cell">2</p>
+                  <p class="table__cell">—</p>
+                </div>
+                <p class="table__cell table__cell--filled">156</p>
+              </div>
+              <div class="table__column">
+                <p class="table__cell table__cell--filled">2016</p>
+                <div class="table__block">
+                  <p class="table__cell table__cell--b">37</p>
+                  <p class="table__cell">26</p>
+                  <p class="table__cell">11</p>
+                </div>
+                <div class="table__block">
+                  <p class="table__cell table__cell--b">103</p>
+                  <p class="table__cell">72</p>
+                  <p class="table__cell">31</p>
+                </div>
+                <div class="table__block">
+                  <p class="table__cell table__cell--b">1</p>
+                  <p class="table__cell">1</p>
+                  <p class="table__cell">—</p>
+                </div>
+                <p class="table__cell table__cell--filled">141</p>
+              </div>
+              <div class="table__column">
+                <p class="table__cell table__cell--filled">2017</p>
+                <div class="table__block">
+                  <p class="table__cell table__cell--b">36</p>
+                  <p class="table__cell">34</p>
+                  <p class="table__cell">2</p>
+                </div>
+                <div class="table__block">
+                  <p class="table__cell table__cell--b">94</p>
+                  <p class="table__cell">56</p>
+                  <p class="table__cell">38</p>
+                </div>
+                <div class="table__block">
+                  <p class="table__cell table__cell--b">3</p>
+                  <p class="table__cell">3</p>
+                  <p class="table__cell">—</p>
+                </div>
+                <p class="table__cell table__cell--filled">133</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="intro intro--map map">
+        <div class="intro__inner container">
+          <div class="mapdiv" id="mapdiv"></div>
+          <div class="intro__content map__content">
+            <h3 class="intro__title heading heading--l">География деятельности</h3>
+            <div class="map-info">
+              <div class="map-info__block">
+                <div class="map-info__column">
+                  <p class="map-info__number">&gt;100 тыс.</p>
+                  <p class="map-info__text">рабочих мест</p>
+                </div>
+              </div>
+              <div class="map-info__block">
+                <div class="map-info__row">
+                  <div class="map-info__column">
+                    <p class="map-info__number">&gt;20</p>
+                    <p class="map-info__text">регионов РФ</p>
+                  </div>
+                  <div class="map-info__column">
+                    <p class="map-info__number">4</p>
+                    <p class="map-info__text">страны присутствия</p>
+                  </div>
+                </div>
+                <div class="map-info__annotation">
+                  <p class="map-info__text map-info__text--decorated">Предприятия в России</p>
+                  <p class="map-info__text map-info__text--decorated">Совместные предприятия за рубежом</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--light">
+        <div class="container">
+          <div class="show-for-tablet">
+            <div class="description">
+              <div class="description__block">
+                <p class="description__caption caption"><img src="../img/icons/about-management.png" alt="" height="30" width="30"/><span>упрaвляющая компания</span></p>
+                <p class="description__caption caption"><img src="../img/icons/about-construction.png" alt="" height="30" width="30"/><span>опытно-конструкторское<br/>бюро</span></p>
+                <p class="description__caption caption"><img src="../img/icons/about-plant.png" alt="" height="30" width="30"/><span>завод</span></p>
+              </div>
+              <div class="description__block">
+                <p class="description__caption caption caption--bold caption--decor-blue">Совместные предприятия<br>за рубежом</p>
+                <div class="description__images"><img src="../img/china.png" alt="" height="120" width="200"/><img src="../img/india.png" alt="" height="120" width="200"/><img src="../img/italy.png" alt="" height="120" width="200"/></div>
+              </div>
+            </div>
+          </div>
+          <div class="grid__item--threefourth grid__item--toright">
+            <div class="facilities">
+              <div class="facilities__header facilities__header-slider">
+                <p class="facilities__heading facilities__col-1">Город</p>
+                <div class="facilities__col-2 row">
+                  <p class="facilities__heading facilities__name">Предприятие</p>
+                  <p class="facilities__heading facilities__comment hide-for-mobile">Комментарий</p>
+                </div>
+              </div>
+              <div class="facilities__section">
+                <p class="facilities__title caption caption--decor-red">Предприятия в России</p>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Москва
+                    <div class="hide-for-tablet">
+                      <div class="description">
+                        <div class="description__block">
+                          <p class="description__caption caption"><img src="../img/icons/about-management.png" alt="" height="30" width="30"/><span>упрaвляющая компания</span></p>
+                          <p class="description__caption caption"><img src="../img/icons/about-construction.png" alt="" height="30" width="30"/><span>опытно-конструкторское<br/>бюро</span></p>
+                          <p class="description__caption caption"><img src="../img/icons/about-plant.png" alt="" height="30" width="30"/><span>завод</span></p>
+                        </div>
+                        <div class="description__block">
+                          <p class="description__caption caption caption--bold caption--decor-blue">Совместные предприятия<br>за рубежом</p>
+                          <div class="description__images"><img src="../img/china.png" alt="" height="120" width="200"/><img src="../img/india.png" alt="" height="120" width="200"/><img src="../img/italy.png" alt="" height="120" width="200"/></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">Штаб-квартира ПАО «ОАК»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">ПАО «Компания «Сухой»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/><img src="../img/icons/about-construction.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">АО «Гражданские самолеты Сухого»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/><img src="../img/icons/about-construction.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">ПАО «Научно-производственная корпорация «Иркут»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-construction.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">ОАО «ОКБ им. А. С. Яковлева»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">АО «ОАК-Транспортные самолеты»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/><img src="../img/icons/about-construction.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">ПАО «Туполев»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/><img src="../img/icons/about-construction.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">ПАО «Авиационный комплекс им. С. В. Ильюшина»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/><img src="../img/icons/about-construction.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">ООО «ОАК-Закупки»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">АО «АэроКомпозит»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">ООО «ОАК – Центр комплексирования»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-construction.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">АО «Российская самолетостроительная корпорация</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/><img src="../img/icons/about-construction.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">«МиГ»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/><img src="../img/icons/about-construction.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">ООО «ОАК-Капитал»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">ООО «ОАК-Девелопмент»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">ОАО «Ильюшин Финанс Ко.»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Жуковский<span>Московская обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">АО «Экспериментальный машиностроительный завод им. В. М. Мясищева»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-construction.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">АО «Летно-исследовательский институт им. М. М. Громова»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-construction.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Кубинка<span>Московская обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">АО «121 АРЗ»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-plant.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Луховицы<span>Московская обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">Луховицкий авиационный завод им. Воронина – филиал АО «РСК «МиГ»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-plant.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Люберцы<span>Московская обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">АО «Авиаремонт»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Казань<span>Респ. Татарстан</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">Казанский авиационный завод им. С. П. Горбунова – филиал ПAO «Туполев»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">АО «КАПО-Композит»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Ульяновск<span>Ульяновская обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">АО «Авиастар-СП»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">АО «АэроКомпозит-Ульяновск»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Воронеж<span>Воронежская обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">ПАО «Воронежское акционерное самолетостроительное общество»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Таганрог<span>Ростовская обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">ПАО «Таганрогский авиационный научно-технический комплекс им. Г. М. Бериева»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">ОАО «325 АРЗ»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-plant.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Нижний Новгород<span>Нижегородская обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">Нижегородский авиастроительный завод «Сокол» – филиал АО «РСК «МиГ»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/></p>
+                    </div>
+                    <div class="facilities__item">
+                      <p class="facilities__name">ОАО «170 РЗ СОП»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-plant.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Новосибирск<span>Новосибирская обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">Новосибирский авиационный завод им. В. П. Чкалова – филиал ПАО «Компания «Сухой»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Иркутск<span>Иркутскская обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">Иркутский авиационный завод – филиал ПАО «Корпорация «Иркут»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-plant.png" alt="" height="20" width="20"/><img src="../img/icons/about-construction.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Комсомольск-на-Амуре<span>Хабаровский край</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">Комсомольский-на-Амуре авиационный завод им. Ю. А. Гагарина – филиал ПАО «Компания «Сухой»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-plant.png" alt="" height="20" width="20"/><img src="../img/icons/about-construction.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Пушкин<span>Ленинградская обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">ОАО «20 АРЗ»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-plant.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Белогорск<span>Амурская обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">ОАО «680 АРЗ»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-plant.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Старая Русса<span>Новгородская  обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">ОАО «123 АРЗ»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-plant.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Краснодар<span>Краснодарский край</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">ОАО «275 АРЗ»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-plant.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Иваново<span>Ивановская обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">ОАО «308 АРЗ»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-plant.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Воздвиженка<span>Приморский край</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">ОАО «322 АРЗ»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-plant.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Рославль<span>Смоленская обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">ОАО «720 РЗ СОП» ремонтный завод средств обеспечения полетов</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-plant.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Волгоград<span>Волгоградская обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">ОАО «ВЗ РТО» Волгоградский завод радиотехнического оборудования</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-plant.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Новочеркасск<span>Ростовская обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">ОАО «31 ЗАТО» завод авиационно-технологического оборудования</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-plant.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Рязань<span>Рязанская обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">АО «360 АРЗ»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-plant.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Ржев<span>Тверская  обл.</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">АО «514 АРЗ»</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-plant.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__col-1">Спасск-Дальний<span>Приморский край</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">ОАО «32 РЗ СОП» ремонтный завод средств обеспечения полетов</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-plant.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="facilities__section">
+                <p class="facilities__title caption caption--decor-blue">Совместные предприятия за рубежом</p>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__location--foreign facilities__col-1">Шанхай&nbsp;<span>(Китай)</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">China-Russia Commercial Aircraft International Corporation Co., Ltd.</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__location--foreign facilities__col-1">Бангалор&nbsp;<span>(Индия)</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">Mutilrole Transport Aircraft Limited</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="facilities__block facilities__slider">
+                  <div class="facilities__location facilities__location--foreign facilities__col-1">Венеция&nbsp;<span>(Италия)</span></div>
+                  <div class="facilities__list facilities__col-2">
+                    <div class="facilities__item">
+                      <p class="facilities__name">SuperJet International S.p.A.</p>
+                      <p class="facilities__comment"><img src="../img/icons/about-management.png" alt="" height="20" width="20"/><img src="../img/icons/about-construction.png" alt="" height="20" width="20"/></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--about-civil">
+        <div class="container section__inner">
+          <div class="grid__row grid__row--tocol">
+            <h3 class="heading heading--xl">Гражданская авиация</h3>
+            <div class="section__details">
+              <p class="section__details-text">Модельный ряд гражданской авиации</p>
+              <p class="section__details-heading">MC-21</p>
+            </div>
+          </div>
+          <div class="features">
+            <div class="features__row features__row--toright">
+              <p class="features__item features__item--takeoff features__item--s">Cреднемагистральный узкофлюзеляжный самолет</p>
+              <p class="features__item features__item--bold features__item--plane features__item--s">Производство опытных образцов</p>
+              <p class="features__item features__item--seat features__item--s">Вместимость 132-211 мест</p>
+            </div>
+          </div>
+          <div class="models">
+            <div class="models__row js-planes-slider">
+              <div class="models__item">
+                <div class="models__img"><img src="../img/planes/SUPERJET100.png" alt="" height="120" width="200"/></div>
+                <h4 class="models__title">Superjet 1000</h4>
+                <p class="models__text"><span>Ближне-среднемагистральный узкофлюзеляжный самолет на&nbsp;</span><b>87-103 места</b></p>
+                <p class="models__text"><b>Серийное производство</b></p>
+              </div>
+              <div class="models__item">
+                <div class="models__img"><img src="../img/planes/CR929.png" alt="" height="120" width="200"/></div>
+                <h4 class="models__title">CR929</h4>
+                <p class="models__text"><span>Дальнемагистральный широкофлюзеляжный самолет на&nbsp;</span><b>210-350 мест</b></p>
+                <p class="models__text"><b>Инициация</b><span>(переговоры с поставщиками)</span></p>
+              </div>
+              <div class="models__item">
+                <div class="models__img"><img src="../img/planes/IL114.png" alt="" height="120" width="200"/></div>
+                <h4 class="models__title">Ил-114</h4>
+                <p class="models__text"><span>Турбовинтовой региональный самолет на&nbsp;</span><b>52-64 места</b></p>
+                <p class="models__text"><b>Модернизация и перезапуск в производство</b></p>
+              </div>
+              <div class="models__item">
+                <div class="models__img"><img src="../img/planes/IL96-400.png" alt="" height="120" width="200"/></div>
+                <h4 class="models__title">Ил-96-400М</h4>
+                <p class="models__text">Дальнемагистральный широкофлюзеляжный самолет на&nbsp;<b>305-370 мест</b></p>
+                <p class="models__text"><b>Модернизация и перезапуск в производство</b></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="models__special">Государственная авиация специального назначения</div>
+              <div class="models__column grid__item--toright">
+                <div class="models__upperline">Модельный ряд государственной авиации специального назначения</div>
+                <div class="models__row js-planes-slider">
+                  <div class="models__item">
+                    <div class="models__img"><img src="../img/planes/AN148.png" alt="" height="120" width="200"/></div>
+                    <h4 class="models__title">Ан-148</h4>
+                    <p class="models__text"><span>Региональный самолет на&nbsp;</span><b>68-80 мест</b></p>
+                    <p class="models__text"><b>Серийное производство</b></p>
+                  </div>
+                  <div class="models__item">
+                    <div class="models__img"><img src="../img/planes/TU204.png" alt="" height="120" width="200"/></div>
+                    <h4 class="models__title">Ту-2014/214/ 204CM</h4>
+                    <p class="models__text"><span>Cреднемагистральный узкофлюзеляжный самолет на&nbsp;<b>210 мест</b></span></p>
+                    <p class="models__text"><b>Серийное производство</b></p>
+                  </div>
+                  <div class="models__item">
+                    <div class="models__img"><img src="../img/planes/IL96.png" alt="" height="120" width="200"/></div>
+                    <h4 class="models__title">Ил-96</h4><span>Дальнемагистральный широкофлюзеляжный самолет на&nbsp;<b>257-289 мест</b></span>
+                    <p class="models__text"><b>Серийное производство</b></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--about-military">
+        <div class="container section__inner">
+          <div class="grid__row grid__row--tocol">
+            <h3 class="heading heading--xl">Военная авиация</h3>
+            <div class="section__details">
+              <p class="section__details-text">Модельный ряд военной авиации</p>
+              <p class="section__details-heading">Су-57</p>
+            </div>
+          </div>
+          <div class="features">
+            <div class="features__row">
+              <p class="features__item features__item--takeoff">Тяжелый многофункциональный истребитель 5-го поколения</p>
+              <p class="features__item features__item--bold features__item--plane">Производство опытных образцов</p>
+            </div>
+          </div>
+          <div class="models">
+            <div class="models__row js-planes-slider">
+              <div class="models__item">
+                <div class="models__img"><img src="../img/planes/MIG29.png" alt="" height="120" width="200"/></div>
+                <h4 class="models__title">МиГ-29</h4>
+                <p class="models__text"><span>Средний многофункциональный истребитель поколения&nbsp;</span><b>4+</b></p>
+                <p class="models__text"><span>Максимальная нагрузка – &nbsp;</span><b>4,5т</b></p>
+                <p class="models__text"><b>Серийное производство</b></p>
+              </div>
+              <div class="models__item">
+                <div class="models__img"><img src="../img/planes/SU30.png" alt="" height="120" width="200"/></div>
+                <h4 class="models__title">Су-30</h4>
+                <p class="models__text"><span>Средний многофункциональный истребитель поколения&nbsp;</span><b>4+</b></p>
+                <p class="models__text"><span>Максимальная нагрузка – &nbsp;</span><b>8т</b></p>
+                <p class="models__text"><b>Серийное производство</b></p>
+              </div>
+              <div class="models__item">
+                <div class="models__img"><img src="../img/planes/SU34.png" alt="" height="120" width="200"/></div>
+                <h4 class="models__title">Су-34
+                  <p class="models__text"><span>Тяжелый фронтовой истребитель-бомбардировщик поколения&nbsp;</span><b>4+</b></p>
+                  <p class="models__text"><span>Максимальная нагрузка – &nbsp;</span><b>4,5т</b></p>
+                  <p class="models__text"><b>Серийное производство</b></p>
+                </h4>
+              </div>
+            </div>
+            <div class="models__row js-planes-slider">
+              <div class="models__item">
+                <div class="models__img"><img src="../img/planes/MIG35.png" alt="" height="120" width="200"/></div>
+                <h4 class="models__title">МиГ-35</h4>
+                <p class="models__text"><span>Средний многофункциональный истребитель поколения&nbsp;</span><b>4++</b></p>
+                <p class="models__text"><span>Максимальная нагрузка – &nbsp;</span><b>4,5т</b></p>
+                <p class="models__text"><b>Разработка и испытания</b></p>
+              </div>
+              <div class="models__item">
+                <div class="models__img"><img src="../img/planes/SU35.png" alt="" height="120" width="200"/></div>
+                <h4 class="models__title">Су-35</h4>
+                <p class="models__text"><span>Тяжелый многофункциональный истребитель поколения&nbsp;</span><b>4++</b></p>
+                <p class="models__text"><span>Максимальная нагрузка – &nbsp;</span><b>8т</b></p>
+                <p class="models__text"><b>Серийное производство</b></p>
+              </div>
+              <div class="models__item">
+                <div class="models__img"><img src="../img/planes/TU160.png" alt="" height="120" width="200"/></div>
+                <h4 class="models__title">Ту-160
+                  <p class="models__text"><span>Стратегический бомбардировщик-ракетоносец</span></p>
+                  <p class="models__text"><b>Модернизация и перезапуск в производство</b></p>
+                </h4>
+              </div>
+            </div>
+            <div class="models__row js-planes-slider">
+              <div class="models__item">
+                <div class="models__img"><img src="../img/planes/PAK-DA.png" alt="" height="120" width="200"/></div>
+                <h4 class="models__title">МиГ-35</h4>
+                <p class="models__text"><span>Стратегический бомбардировщик-ракетоносец</span></p>
+                <p class="models__text"><b>Разработка</b></p>
+              </div>
+              <div class="models__item">
+                <div class="models__img"><img src="../img/planes/YAK130.png" alt="" height="120" width="200"/></div>
+                <h4 class="models__title">Як-130</h4>
+                <p class="models__text"><span>Учебно-боевой и тренировочный самолет</span><b>4++</b></p>
+                <p class="models__text"><span>Максимальная нагрузка – &nbsp;</span><b>3т</b></p>
+                <p class="models__text"><b>Серийное производство</b></p>
+              </div>
+              <div class="models__item">
+                <div class="models__img"><img src="../img/planes/YAK152.png" alt="" height="120" width="200"/></div>
+                <h4 class="models__title">Як-152
+                  <p class="models__text"><span>Учебно-тренировочный самолет</span></p>
+                  <p class="models__text"><b>Развертывание производства</b></p>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--about-transport">
+        <div class="container section__inner">
+          <div class="grid__row grid__row--tocol">
+            <h3 class="heading heading--l">Транспортная и&nbsp;специальная авиация</h3>
+            <div class="section__details">
+              <p class="section__details-text">Модельный ряд гражданской авиации</p>
+              <p class="section__details-heading section__details-heading--s"> Ил-76МД -90А</p>
+            </div>
+          </div>
+          <div class="features">
+            <div class="features__row">
+              <p class="features__item features__item--takeoff">Тяжелый военно-транспортный самолет</p>
+              <p class="features__item features__item--bold features__item--plane">Серийное производство</p>
+              <p class="features__item features__item--weight">Максимальная нагрузка&nbsp;–&nbsp;<b>60 т</b></p>
+            </div>
+          </div>
+          <div class="models">
+            <div class="models__row js-planes-slider">
+              <div class="models__item">
+                <div class="models__img"><img src="../img/planes/IL112.png" alt="" height="120" width="200"/></div>
+                <h4 class="models__title">Ил-112В</h4>
+                <p class="models__text"><span>Легкий военно-транспортный самолет</span></p>
+                <p class="models__text"><span>Максимальная нагрузка – &nbsp;</span><b>5т</b></p>
+                <p class="models__text"><b>Сборка первых летных образцов</b></p>
+              </div>
+              <div class="models__item">
+                <div class="models__img"><img src="../img/planes/CBTC.png" alt="" height="120" width="200"/></div>
+                <h4 class="models__title">CBTC</h4>
+                <p class="models__text"><span>Средний военно-транспортный самолет</span></p>
+                <p class="models__text"><span>Максимальная нагрузка – &nbsp;</span><b>20т</b></p>
+                <p class="models__text"><b>Проектирование</b></p>
+              </div>
+              <div class="models__item">
+                <div class="models__img"><img src="../img/planes/BE200.png" alt="" height="120" width="200"/></div>
+                <h4 class="models__title"> Бе-200
+                  <p class="models__text"><span>Многофункциональный самолет-амфибия</span></p>
+                  <p class="models__text"><span>Максимальная нагрузка – &nbsp;</span><b>12т</b></p>
+                  <p class="models__text"><b>Серийное производство</b></p>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--light">
+        <div class="container">
+          <div class="grid__row grid__row--tocol">
+            <p class="heading heading--s heading--primary section__aside section__aside-block">
+              Первый полет</br>
+              МС-21
+            </p>
+            <div class="grid__item--threefourth">
+              <p class="caption caption--m caption--justify">
+                Один из ключевых проектов Объединенной авиастроительной корпорации — МС-21,
+                пассажирский лайнер нового поколения, ориентированный на самый массовый
+                сегмент рынка авиаперевозок. Первый полет МС-21 состоялся 28 мая 2017 года
+                на аэродроме Иркутского авиационного завода. Полет продолжительностью 30
+                минут проходил на высоте 1 000 метров при скорости 300 км/ч. Самолет
+                пилотировал экипаж в составе летчика-испытателя, Героя России Олега Кононенко
+                и летчика-испытателя, Героя России Романа Таскаева. Опытный экземпляр был
+                успешно проверен на устойчивость и управляемость, а также на управляемость
+                двигателей: все самолетные системы работали без сбоев, были подтверждены
+                характеристики и режимы работы двигателей.
+              </p>
+              <p class="caption caption--m caption--justify">
+                Второй этап летных заводских доводочных испытаний МС-21-300 начался в сентябре
+                2017 года. Основной целью второго этапа летных испытаний было расширение
+                диапазона полетов по массе, центровке, скорости и высоте. В ходе полетов
+                доработанные системы самолета работали без замечаний. Самолет МС-21 создается в
+                кооперации c целым рядом предприятий ОАК: ПАО «Корпорация «Иркут», АО
+                «АэроКомпозит», АО «Авиастар-СП», ПАО «ВАСО», ООО «ОАК — Центр комплексирования»
+                и другими. При разработке МС-21 были внедрены самые передовые технические решения,
+                которые обеспечат повышенный комфорт пассажирам и привлекательные экономические
+                характеристики авиакомпаниям.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--about-future">
+        <div class="container grid__row grid__row--tocol">
+          <div class="grid__item--third section__aside section__aside--light">
+            <p class="caption caption--l section__aside-block section__aside-block--l">
+              Это не просто полет нового
+              самолета, это появление
+              нового продукта, который
+              на ближайшие 50 лет
+              определит облик российского
+              гражданского авиастроения.</br>
+              По нашим оценкам,
+              в&nbsp;ближайшие 20 лет в сегменте
+              МС-21 мировой спрос составит
+              около 15 000 новых лайнеров.
+              Уверен,авиакомпании высоко
+              оценят наш новый самолет.
+            </p>
+          </div>
+          <div class="grid__item--twothird">
+            <p class="caption caption--m caption--justify">
+              Так, МС-21 будет иметь самый большой диаметр фюзеляжа в классе узкофюзеляжных самолетов,
+              что обеспечит качественно новый уровень комфорта: расширит личное пространство каждого
+              пассажира, позволит разминуться с тележкой обслуживания и обеспечит авиакомпаниям
+              сокращение времени оборота в аэропортах. Среди других нововведений — установка больших
+              иллюминаторов, которые увеличат естественную освещенность пассажирского салона. Также в
+              самолете будет поддерживаться комфортное для пассажиров давление воздуха и улучшенный
+              микроклимат. Для пилотов самолетов МС-21 разработана инновационная эргономичная кабина.
+              
+            </p>
+            <p class="caption caption--m caption--justify">
+              Кроме того, передовые технические решения были внедрены в области аэродинамики,
+              двигателестроения и самолетных систем. Крыло из высокопрочных композиционных материалов,
+              впервые в мире созданное для узкофюзеляжных самолетов вместимостью свыше 130 пассажиров,
+              улучшит летно-технические характеристики лайнера. Инновационные решения в двигателе
+              сократят потребление топлива, а также вредные выбросы и шум, обеспечивая более высокую
+              крейсерскую скорость. Использование современных материалов также позволит заметно
+              снизить вес самолета.
+              
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section--light">
+        <div class="container">
+          <div class="contents"><a class="contents__next" href="#">Далее</a>
+            <p class="contents__text">
+              ОБРАЩЕНИЕ ПРЕДСЕДАТЕЛЯ
+              СОВЕТА ДИРЕКТОРОВ ПАО «ОАК»
+            </p><a class="contents__back" href="#">Оглавление</a>
+          </div>
+        </div>
+      </section>
+      <div class="scroll-top"><a href="#"><span class="visually-hidden">Scroll to top</span></a></div>
+    </main>
+  </body>
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/jquery.fullpage.min.js"></script>
+  <script src="js/vendor/slick.min.js"></script>
+  <script src="js/vendor/ammap.js" type="text/javascript"></script>
+  <script src="js/vendor/worldRussiaSplitLow.js" type="text/javascript"></script>
+  <script src="js/vendor/script-ammap.js" type="text/javascript"></script>
+  <script src="js/bundle.min.js"></script>
+</html>

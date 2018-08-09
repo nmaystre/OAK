@@ -1,9 +1,10 @@
-@import 'base/normalize.scss';
 @import 'base/variables';
 @import 'base/fonts.scss';
 @import 'base/base.scss';
 @import 'base/grid.scss';
 @import 'base/heading.scss';
+@import 'base/keyframes.scss';
+@import 'base/section.scss';
 
 @import 'components/header.scss';
 @import 'components/search.scss';
@@ -12,14 +13,22 @@
 @import 'components/menu.scss';
 @import 'components/intro.scss';
 @import 'components/cloud.scss';
+@import 'components/plane.scss';
 @import 'components/circle-nav.scss';
 @import 'components/table.scss';
 @import 'components/map.scss';
+@import 'components/section-header.scss';
+@import 'components/facilities.scss';
+@import 'components/description.scss';
+@import 'components/features.scss';
+@import 'components/models.scss';
+@import 'components/contents.scss';
+@import 'components/scroll-top.scss';
 
-@import 'vendor/jquery.fullpage.min.css';
-@import 'components/fullpage.scss';
 
-@import 'vendor/slick.scss';
+@import 'components/slick';
 @import 'components/slider.scss';
+
+@import 'components/fullpage.scss';
 
 

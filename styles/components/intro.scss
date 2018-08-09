@@ -16,26 +16,16 @@
   }
 
   &--main {
-    background-image: url(../img/plane1.png), url(../img/bg-clouds-1.jpg);
-    background-position: 70% 90%, 0 0;
-    background-size: 1155px, cover;
-    background-repeat: no-repeat, no-repeat;
+    background-image: url(../img/bg-clouds-1.jpg);
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
+    z-index: 1;
 
 
-    @media #{$breakpointDisplayLarge} {
-      background-position: 55% 86%, 0 0;
-      background-size: 1140px, cover;
-      background-repeat: no-repeat, no-repeat;
-    }
     @media #{$breakpointDisplay} {
       padding-top: 250px;
-    }
-    @media #{$breakpointMobile} {
-      background-size: 500px, cover;
-      background-position: 100% 270px, 0 0;
-
-
     }
   }
 
@@ -81,11 +71,12 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
+      animation: animCloud2 30s infinite linear;
     }
     &::after {
       width: 1200px;
       height: 1000px;
-      left: 70%;
+      left: 0%;
       bottom: 30%;
       @media #{$breakpointTablet} {
         width: 600px;
@@ -95,7 +86,7 @@
     &::before {
       width: 1000px;
       height: 800px;
-      left: 10%;
+      left: 0%;
       bottom: -20%;
 
       @media #{$breakpointTablet} {
@@ -125,27 +116,31 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
+      animation: animCloud2 30s infinite linear;
     }
     &::after {
       width: 1200px;
       height: 700px;
-      left: 80%;
-      bottom: -200px;
+      left: 0%;
+      bottom: 300px;
     }
     &::before {
       width: 1200px;
       height: 1000px;
-      left: 0%;
-      bottom: 0%;
+      left: 0;
+      bottom: 0;
+      animation: animCloud2 20s infinite linear;
+
       @media #{$breakpointDisplayLarge} {
-        left: -40%;
-        bottom: -20%;
+        width: 800px;
+        left: 0%;
+        bottom: 0%;
       }
       @media #{$breakpointTablet} {
         width: 500px;
         height: 300px;
-        left: 40%;
-        bottom: 0%;
+        left: 0%;
+        bottom: 0;
       }
     }
   }
@@ -167,19 +162,21 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
+      animation: animCloud2 30s infinite linear;
     }
     &::after {
-      left: 50%;
-      bottom: -200px;
+      left: 10%;
+      bottom: 0px;
       @media #{$breakpointDisplayLarge} {
-        left: 40%;
+        left: 0%;
+        bottom: 10%;
       }
     }
     &::before {
-      left: -10%;
+      left: 0%;
       bottom: 20%;
       @media #{$breakpointDisplayLarge} {
-        left: -30%;
+        left: 0%;
         bottom: 0%;
       }
     }

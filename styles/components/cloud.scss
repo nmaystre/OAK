@@ -11,34 +11,39 @@
   left: 0;
   top: 0;
   position: absolute;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   pointer-events: none;
+  //z-index:-2;
 
   &--l {
-    animation: animCloud 20s infinite linear;
+    animation: animCloud 10s infinite linear;
     height: 900px;
     top: 50%;
   }
+
+  &--l2 {
+    animation: animCloud 20s infinite linear;
+    height: 400px;
+    top: 60%;
+    z-index: 0;
+  }
+
   &--m {
-    animation: animCloud 40s infinite linear;
+    animation: animCloud 20s infinite linear;
     height: 740px;
     top: -50%;
   }
+
   &--s {
     animation: animCloud 80s infinite linear;
     height: 650px;
     top: 20%;
   }
-}
 
-@keyframes animCloud {
-  from {
-    transform: translateX(100%)
-  }
-  to {
-    transform: translateX(-100%)
+  &--s2 {
+    animation: animCloud 34s infinite linear;
+    height: 650px;
+    z-index: -2;
+    top: 40%;
   }
 }

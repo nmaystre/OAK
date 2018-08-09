@@ -1,0 +1,25 @@
+.scroll-top {
+  height: auto;
+  padding: 10px;
+  display: none;
+  position: fixed;
+  right: 50px;
+  bottom: 40px;
+  z-index: 10;
+  @media #{$breakpointMobile} {
+    bottom: 25px;
+    right: 20px;
+  }
+
+  a {
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    background-image: url("../img/icons/scrollup.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-decoration: none;
+
+  }
+}

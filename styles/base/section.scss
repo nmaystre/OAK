@@ -1,0 +1,168 @@
+.section {
+  
+  &--light {
+    background-color: $white;
+    color: $gray-dark;
+    padding-top: 100px;
+    padding-bottom: $gapLg;
+
+    @media #{$breakpointTablet} {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+
+  &--about-civil {
+    padding-top: 25px;
+    background-image: url(../img/bg-about-2.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    @media #{$breakpointTablet} {
+      background-image: url(../img/bg-about-2-tablet.jpg);
+      background-position: 0 50%;
+    }
+  }
+
+  &--about-military {
+    padding-top: 20px;
+    background-image: url(../img/bg-about-3.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    @media #{$breakpointTablet} {
+      background-image: url(../img/bg-about-3-tablet.jpg);
+      background-position: 0 50%;
+    }
+  }
+
+  &--about-transport {
+    padding-top: 25px;
+    background-image: url(../img/bg-about-4.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    @media #{$breakpointTablet} {
+      background-image: url(../img/bg-about-4-tablet.jpg);
+      background-position: 0 50%;
+    }
+  }
+
+  &--about-future {
+    padding-top: $gapLg;
+    padding-bottom: 400px;
+    background-image: url(../img/bg-about-5.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    @media #{$breakpointTablet} {
+      background-image: url(../img/bg-about-5-tablet.jpg);
+      padding-bottom: 700px;
+    }
+    @media #{$breakpointMobile} {
+      padding-bottom: 80px;
+    }
+  }
+}
+
+.section__aside {
+  color: $primary-lighten;
+  @media #{$breakpointTablet} {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  &--light {
+    color: $white;
+  }
+}
+
+.section__aside-block {
+  margin-bottom: 60px;
+
+  @media #{$breakpointTablet} {
+    margin-bottom: 30px;
+  }
+
+  &--decorated {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+
+    @media #{$breakpointTablet} {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      bottom: 0;
+      background-image: url(../img/icons/red-dot.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--l {
+    @media #{$breakpointTablet} {
+      width: 100%;
+    }
+  }
+}
+
+.section__inner {
+    min-height: 640px;
+    padding-top: $gapLg;
+    padding-bottom: $gapLg;
+}
+
+.section__details {
+  width: 450px;
+  margin-left: auto;
+  flex-shrink: 0;
+  @media #{$breakpointTablet} {
+    margin-left: 0;
+  }
+  @media #{$breakpointMobile} {
+    width: auto;
+  }
+}
+
+.section__details-text {
+  font-size: 24px;
+  border-bottom: 5px solid $white;
+  margin: 0;
+  padding-bottom: 35px;
+  @media #{$breakpointTablet} {
+    margin-left: 0;
+  }
+  @media #{$breakpointMobile} {
+    margin-bottom: 10px;
+    font-size: 19px;
+    padding-bottom: 20px;
+  }
+}
+
+.section__details-heading {
+  font-size: 102px;
+  line-height: 102px;
+  font-weight: 700;
+  margin: 30px 0 0;
+  @media #{$breakpointMobile} {
+    width: auto;
+    font-size: 90px;
+    line-height: normal;
+    margin-top: 0;
+  }
+
+  &--s {
+    @media #{$breakpointMobile} {
+      font-size: 65px;
+      line-height: 65px;
+    }
+  }
+}
+

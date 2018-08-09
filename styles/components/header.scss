@@ -5,6 +5,7 @@
   right: 0;
   top: 0;
   z-index: 101;
+
   @media #{$breakpointTablet} {
     padding-top: 16px;
   }
@@ -35,7 +36,7 @@
     }
   }
 
-  &__logo img{
+  &__logo img {
     @media #{$breakpointMobile} {
       width: 220px;
       height: auto;
@@ -121,5 +122,147 @@
         font-size: 0;
       }
     }
+  }
+}
+
+.header--white {
+  background-color: $white;
+  color: $gray-dark;
+  padding-bottom: 35px;
+
+  @supports (position: sticky) {
+    position: sticky;
+  }
+
+  @media #{$breakpointTablet} {
+    padding-bottom: 40px;
+  }
+
+  & .header__inner {
+    position: relative;
+  }
+
+  & .header__row {
+    flex-wrap: nowrap;
+  }
+
+  .header__section {
+    position: relative;
+    color: $gray-lighten;
+    font-size: 18px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+
+    @media #{$breakpointTablet} {
+      position: absolute;
+      left: 10px;
+      bottom: -30px;
+      font-size: 14px;
+    }
+
+    &::before {
+      content: '/';
+      font-size: 30px;
+      padding-right: 10px;
+      @media #{$breakpointTablet} {
+      }
+    }
+  }
+
+  & .header__nav {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 auto;
+    padding-left: 53px;
+    @media #{$breakpointTablet} {
+      display: none;
+    }
+  }
+
+  .header__nav-item {
+    margin-left: 30px;
+
+    &:first-child {
+      @media #{$breakpointTablet} {
+        padding-top: 0;
+      }
+    }
+  }
+
+  .header__nav-link {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    min-height: 40px;
+    padding: 25px;
+    transition: all 0.2s linear;
+    font-weight: 700;
+    font-size: 18px;
+    color: $gray-lighten;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-image: url("../img/star.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.7;
+      transition: all 0.2s linear;
+    }
+
+    &--book::before {
+      background-image: url("../img/icons/book.png");
+    }
+    &--download::before {
+      background-image: url("../img/icons/download.png");
+    }
+    &--feedback::before {
+      background-image: url("../img/icons/mail.png");
+    }
+    &--map::before {
+      background-image: url("../img/icons/share.png");
+    }
+    &--fav::before {
+      background-image: url("../img/icons/star.png");
+    }
+
+    &:hover {
+      color: $gray-dark;
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  & .search {
+    margin-top: 0;
+  }
+
+  & .search__btn {
+    background-image: url('../img/icons/search-darkgray.png');
+  }
+
+  & .header__sidebar-links {
+    margin-top: -10px;
+  }
+
+  & .header__lang {
+    color: $primary;
+  }
+
+  & .search--open .search__input {
+    width: 400px;
+  }
+
+  & .hamburger__icon,
+  & .hamburger__icon::before,
+  & .hamburger__icon::after {
+    background-color: $gray-lighten;
   }
 }
